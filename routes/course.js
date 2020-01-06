@@ -52,7 +52,7 @@ router.post("/view/resources", middleware.isLoggedIn,function(req, res ,next) {
 	Course.create(newCourse, function(err,newlyCreated){
 		if(err){
 			req.flash('error', err.message);
-			console.log(newlyCreated);
+		
 			return res.redirect('back');
 		}else{
 			

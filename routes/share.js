@@ -69,7 +69,7 @@ router.post("/share", middleware.isLoggedIn,function(req, res ,next) {
 			
 			return res.redirect('back');
 		}else{
-			console.log(newlyCreated);
+			
 			res.redirect("/share" );
 		}
 	});
@@ -99,7 +99,7 @@ router.post("/feedback", function(req, res ,next) {
 	Feed.create(newfeed, function(err,newlyCreated){
 		if(err){
 			req.flash('error', err.message);
-			console.log(newlyCreated);
+			
 			return res.redirect('back');
 		}else{
 			

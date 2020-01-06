@@ -1,744 +1,333 @@
-
 <% include ../partials/header %>
-
-
-
-<style>
-	@media only screen and (max-width: 700px) {
-			#cad{
-				
-				margin:10px;
-				margin-left:20px;
-				width:320px;
-				
-				
-				
-			}
-		#cat{
-				max-width:600px;
-				margin-left:5%;
-				
-				
-				
-			}
-			#bo{
-				border: 2px solid grey;
-			}
-			#ple{
-				max-width:368px;
-			}
-		#big{
-			display:none;
-		}
-	#in1:hover{
-		margin-bottom:160px;
-	}
-	#in2:hover{
-		margin-bottom:300px;
-	}
-	#in3:hover{
-		margin-bottom:160px;
-	}
-	#in4:hover{
-		margin-bottom:200px;
-	}
-	#in5:hover{
-		margin-bottom:160px;
-	}
-	#in6:hover{
-		margin-bottom:200px;
-	}
-	#in7:hover{
-		margin-bottom:200px;
-	}
-	#in8:hover{
-		margin-bottom:160px;
-	}
-	#in9:hover{
-		margin-bottom:160px;
-	}
-	#in10:hover{
-		margin-bottom:160px;
-	}
-	#in11:hover{
-		margin-bottom:120px;
-	}
-	#in12:hover{
-		margin-bottom:120px;
-	}
-	}
-	@media only screen and (min-width: 1200px) {
-			#cad{
-				
-				margin:25px;
-				width:460px;
-				margin-left:5%;
-				
-				
-			}
-		#new{
-			margin-top:3px;
-			float:right;
-		}
-		#imm{
-			margin-right:20px;
-		}
-			#mobile{
-			display:none;
-		}
-		#ple{
-			max-width:300px;
-		}
-	}
-</style>
-
-<!-- <div style="margin-top:5%;" class="row conatainer">
-	
-<!-- <div class="col-lg-3">
-	
-	
-				  <a href="#" class="list-group-item btn btn-light list-group-item-action active" >
-					CATEGORIES
-				  </a>
-				
-				  
-	<div class="ui fluid vertical menu">
-		
-						<div class="ui link item ">
-						<a  href="/adPost/category/all/request" class="text"><i class="home icon"></i>ALL</a>
-						</div>
-		
-  
-			   <div class="ui left pointing simple dropdown link item ">
-				<i class="dropdown icon"></i>
-				<span class="text"><i class="mobile alternate icon"></i>Mobiles</span>
-				<div class="menu" style="margin-top:-42px; ">
-					<a class="list-group-item list-group-item-action" class="item" href="/adPost/category/mobile/request" ><i class="mobile alternate icon"></i>Mobile Phones</a>
-
-				  <a class="list-group-item list-group-item-action"class="item" href="/adPost/category/mobile/request"><i class="mobile icon"></i>Accessories</a>
-
-				  <a  class="list-group-item list-group-item-action" class="item"href="/adPost/category/mobile/request"><i class="tablet alternate icon"></i>Tablets</a>
-				</div>
-			  </div>
-		
-		
-			  <div class="ui left pointing simple dropdown item">
-				<i class="dropdown icon"></i>
-				<span class="text"><i class="computer icon"></i>Electronics & Appliances</span>
-				<div class="menu" style="margin-top:-42px; ">
-				  <a class="item" class="list-group-item list-group-item-action" href="/adPost/category/electronics/request" ><i class="laptop icon"></i>Laptops</a>
-
-				  <a class="list-group-item list-group-item-action" href="/adPost/category/electronics/request" class="item" ><i class="calculator icon"></i>Calculator</a>
-
-				  <a class="list-group-item list-group-item-action" class="item" href="/adPost/category/electronics/request" ><i class="mouse pointer icon"></i>Mouse</a>
-
-				  <a class="list-group-item list-group-item-action"class="item" href="/adPost/category/electronics/request"><i class="hdd icon"></i>Hard Disks, Pendrives</a>
-
-				  <a class="list-group-item list-group-item-action" class="item" href="/adPost/category/electronics/request"><i class="camera retro icon"></i>Camera & Lenses</a>
-
-				  <a class="list-group-item list-group-item-action" class="item" href="/adPost/category/electronics/request" value="electronics" ><i class="itunes note icon"></i>Headphones & Speakers</a>
-
-				  <a class="list-group-item list-group-item-action" class="item" href="/adPost/category/electronics/request" value="electronics"  ><i class="gamepad icon"></i>Games & Entertainment</a>
-				</div>
-			  </div>
-
-		
-		
-		
-  <div class="ui left pointing simple dropdown item">
-    <i class="dropdown icon"></i>
-    <span class="text"><i class="bicycle icon"></i>Cycle</span>
-    <div class="menu" style="margin-top:-45px; ">
-      <a class="list-group-item list-group-item-action" href="/adPost/category/cycle/request"  ><i class="bicycle icon"></i>Cycle</a>
-      <a class="list-group-item list-group-item-action" href="/adPost/category/cycle/request"  ><i class="bicycle icon"></i>Cycle Ascessories</a>
-      <a class="list-group-item list-group-item-action" href="/adPost/category/cycle/request" ><i class="bicycle icon"></i>Cycle For Rent</a>
-    </div>
-  </div>
-		
-		
-		
-  <div class="ui left pointing simple dropdown item">
-    <i class="dropdown icon"></i>
-    <span class="text"><i class="book icon"></i>Books & Notes</span>
-    <div class="menu" style="margin-top:-42px; ">
-      <a class="list-group-item list-group-item-action" href="/adPost/category/books/request"><i class="book icon"></i>Academic Books</a>
-      
-      <a class="list-group-item list-group-item-action" href="/adPost/category/books/request"><i class="book icon"></i>Novels</a>
-      
-      <a class="list-group-item list-group-item-action" href="/adPost/category/books/request"><i class="newspaper outline icon"></i>Class Notes</a>
-      
-      <a class="list-group-item list-group-item-action" href="/adPost/category/books/request"><i class="newspaper outline icon"></i>CAT-II Notes</a>
-    </div>
-</div>
-		
-		
-		
-   <div class="ui left pointing simple dropdown item">
-    <i class="dropdown icon"></i>
-    <span class="text"><i class="microchip icon"></i>Project Components</span>
-    <div class="menu" style="margin-top:-42px; ">
-      <a class="item" class="list-group-item list-group-item-action" href="/adPost/category/project/request"><i class="rss icon"></i>Sensors</a>
-      <a class="item" class="list-group-item list-group-item-action" href="/adPost/category/project/request" ><i class="microchip icon"></i>Microcontrollers</a>
-		<a class="item" class="list-group-item list-group-item-action" href="/adPost/category/project/request" ><i class="code icon"></i>Others</a>
- 
-  </div>
-		</div>
-		
-		
-		
-  <div class="ui left pointing simple dropdown item">
-    <i class="dropdown icon"></i>
-    <span class="text"><i class="futbol icon"></i>Sports & Outdoor</span>
-    <div class="menu" style="margin-top:-42px; ">
-      <a  class="item" class="list-group-item list-group-item-action" href="/adPost/category/project/request"class="item" ><i class="shopping bag icon"></i>Sports Wear</a>
-      
-      <a  class="item" class="list-group-item list-group-item-action" href="/adPost/category/project/request"class="item" ><i class="table tennis icon"></i>Sports Equipment</a>
-      
-      <a  class="item" class="list-group-item list-group-item-action" href="/adPost/category/project/request" class="item" ><i class="studiovinari icon"></i>Gym & Fitness</a>
-      <a  class="item" class="list-group-item list-group-item-action" href="/adPost/category/project/request" class="item" ><i class="gamepad icon"></i>Musical Instruments</a>
-    </div>
-  </div>
-	   
-		
-		
-		
-  <div class="ui left pointing simple dropdown item">
-    <i class="dropdown icon"></i>
-    <span class="text"><i class="shopping cart icon"></i>Fashion</span>
-    <div class="menu" style="margin-top:-40px; ">
-      <a class="item" class="list-group-item list-group-item-action" href="/adPost/category/Fashion/request" >Footwear</a>
-      <a class="item" class="list-group-item list-group-item-action" href="/adPost/category/Fashion/request"  >Clothing</a>
-      
-      <a class="item" class="list-group-item list-group-item-action" href="/adPost/category/Fashion/request"  >Watch</a>
-      <a class="item" class="list-group-item list-group-item-action" href="/adPost/category/Fashion/request" >Coolers/spectacles</a>
-    </div>
-	  </div>
-		
-		
-		
-		
-		
-  <div class="ui left pointing simple dropdown item">
-    <i class="dropdown icon"></i>
-    <span class="text"><i class="gem icon"></i>Jewelery & Cosmetics</span>
-    <div class="menu" style="margin-top:-42px; ">
-      <a class="list-group-item list-group-item-action" href="/adPost/category/Jewelery/request" class="item" >Ring</a>
-     
-
-      <a class="list-group-item list-group-item-action" href="/adPost/category/Jewelery/request"  class="item" >Necklace</a>
-      
-      <a class="list-group-item list-group-item-action" href="/adPost/category/Jewelery/request"  class="item"  >Cosmetics</a>
-    </div>
-  </div>
-		
-		
-		
-		
-   <div class="ui left pointing simple dropdown item">
-    <i class="dropdown icon"></i>
-     <span class="text"><i class="gem icon"></i>Personal Care</span>
-    
-    <div class="menu" style="margin-top: -42px">
-      <a class="list-group-item list-group-item-action" href="/adPost/category/Personal_Care/request"class="item" >Hair Dryer</a>
-     
-      <a class="list-group-item list-group-item-action" href="/adPost/category/Personal_Care/request"class="item" >Trimmers</a>
-  
-      <a class="list-group-item list-group-item-action" href="/adPost/category/Personal_Care/request"class="item" >Others</a>
-    </div>
-  </div>
-		
-		
-		
-		
-    <div class="ui left pointing simple dropdown item">
-    <i class="dropdown icon"></i>
-     <span class="text"><i class="gem icon"></i>Movies and Games/subscriptions</span>
-    
-    <div class="menu" style="margin-top: -42px">
-      <a class="list-group-item list-group-item-action" href="/adPost/category/Movie/request" class="item" ><i class="gamepad icon"></i>Movie Tickets</a>
-     
-      <a class="list-group-item list-group-item-action" href="/adPost/category/Movie/request"class="item" ><i class="gamepad icon"></i>Popular Games</a>
-      <a class="list-group-item list-group-item-action" href="/adPost/category/Movie/request" class="item" ><i class="gamepad icon"></i>BoardGames/rubix</a>
-      
-  
-      <a class="list-group-item list-group-item-action" href="/adPost/category/Movie/request" class="item" >Other Subscriptions Sharing</a>
-  </div>
-	</div> -->
-		
-		
-		
-		
-  <!-- <div class="ui left pointing simple dropdown item">
-    <i class="dropdown icon"></i>
-     <span class="text"><i class="food icon"></i>Foods/Snacks</span>
-    
-    <div class="menu" style="margin-top: -42px">
-      <a class="list-group-item list-group-item-action" href="/adPost/category/Foods/request"class="item"><i class="utensils icon"></i>Food items</a>
-     
-      <a class="list-group-item list-group-item-action" href="/adPost/category/Foods/request"class="item"class="item"  ><i class="shopping basket icon"></i>Nutritious Food</a>
-  
-    </div>
-  </div>
-		
-		
-		
-	  
-  <div class="ui left pointing simple dropdown item">
-    <i class="dropdown icon"></i>
-     <span class="text"><i class="gem icon"></i>Others</span>
-    
-    <div class="menu" style="margin-top: -42px">
-      <a class="list-group-item list-group-item-action" href="/adPost/category/others/request" class="item" ><i class="gift icon"></i>Gift Items</a>
-     
-      <a class="list-group-item list-group-item-action" href="/adPost/category/others/request" class="item" >Others</a>
-  
-    </div>
-  </div>
-	
-		
-		
-		
-
-   </div>
-
-</div> --> -->
-<div  class="row text-center" style="display:flex;">
-		<div  id="ple" class="col-lg-3 col-sm-5 col-xm-12 "  style="border: 2px solid grey; padding-top: 20px; ">
-			<div style="width:280px;" id="big"class="list-group">
-				  <a href="#" class="list-group-item btn btn-light list-group-item-action active" >
-					CATEGORIES
-				  </a>
-				
-			
-				
-	<div  style="max-width:600px" >
-	<div class="ui fluid vertical menu">
-		
-	<div class="ui link item ">
-    
-	  
-    <a  href="/adPost/category/all/request" class="text"><i class="home icon"></i>ALL</a>
-
-  </div>
-  <div class="ui left pointing simple dropdown link item ">
-    <i class="dropdown icon"></i>
-
-    <span class="text"><i class="mobile alternate icon"></i>Mobiles</span>
-    <div class="menu" style="margin-top:-42px; ">
-		<a class="list-group-item list-group-item-action" class="item" href="/adPost/category/mobile/request" ><i class="mobile alternate icon"></i>Mobile Phones</a>
-      
-      <a class="list-group-item list-group-item-action"class="item" href="/adPost/category/mobile/request"><i class="mobile icon"></i>Accessories</a>
-      
-      <a  class="list-group-item list-group-item-action" class="item"href="/adPost/category/mobile/request"><i class="tablet alternate icon"></i>Tablets</a>
-		<a class="list-group-item list-group-item-action" href="/adPost/category/mobile/request"class="item" >Others</a>
-    </div>
-  </div>
-  <div class="ui left pointing simple dropdown item">
-    <i class="dropdown icon"></i>
-	  
-
-    <span class="text"><i class="computer icon"></i>Electronics & Appliances</span>
-    <div class="menu" style="margin-top:-42px; ">
-      <a class="item" class="list-group-item list-group-item-action" href="/adPost/category/electronics/request" ><i class="laptop icon"></i>Laptops</a>
-    
-      <a class="list-group-item list-group-item-action" href="/adPost/category/electronics/request" class="item" ><i class="calculator icon"></i>Calculator</a>
-      
-      <a class="list-group-item list-group-item-action" class="item" href="/adPost/category/electronics/request" ><i class="mouse pointer icon"></i>Mouse</a>
-    
-      <a class="list-group-item list-group-item-action"class="item" href="/adPost/category/electronics/request"><i class="hdd icon"></i>Hard Disks, Pendrives</a>
-      
-      <a class="list-group-item list-group-item-action" class="item" href="/adPost/category/electronics/request"><i class="camera retro icon"></i>Camera & Lenses/Lamps</a>
-      
-      <a class="list-group-item list-group-item-action" class="item" href="/adPost/category/electronics/request" value="electronics" ><i class="itunes note icon"></i>Headphones & Speakers</a>
-    
-      <a class="list-group-item list-group-item-action" class="item" href="/adPost/category/electronics/request" value="electronics"  ><i class="gamepad icon"></i>Games & Entertainment</a>
-		<a class="list-group-item list-group-item-action" href="/adPost/category/electronics/request"class="item" >Others</a>
-    </div>
-  </div>
-		
-  <div class="ui left pointing simple dropdown item">
-    <i class="dropdown icon"></i>
-    <span class="text"><i class="bicycle icon"></i>Cycle</span>
-    <div class="menu" style="margin-top:-45px; ">
-      <a class="list-group-item list-group-item-action" href="/adPost/category/cycle/request"  ><i class="bicycle icon"></i>Cycle</a>
-      <a class="list-group-item list-group-item-action" href="/adPost/category/cycle/request"  ><i class="fas fa-biking"></i> Cycle Ascessories</a>
-      <a class="list-group-item list-group-item-action" href="/adPost/category/cycle/request" ><i class="fas fa-motorcycle"></i> Cycle For Rent</a>
-		<a class="list-group-item list-group-item-action" href="/adPost/category/cycle/request"class="item" >Others</a>
-    </div>
-  </div>
-  <div class="ui left pointing simple dropdown item">
-    <i class="dropdown icon"></i>
-    <span class="text"><i class="book icon"></i>Books & Notes</span>
-    <div class="menu" style="margin-top:-42px; ">
-      <a class="list-group-item list-group-item-action" href="/adPost/category/books/request"><i class="book icon"></i>Academic Books</a>
-      
-      <a class="list-group-item list-group-item-action" href="/adPost/category/books/request"><i class="book icon"></i>Novels</a>
-      
-      <a class="list-group-item list-group-item-action" href="/adPost/category/books/request"><i class="newspaper outline icon"></i>Class Notes</a>
-      
-      <a class="list-group-item list-group-item-action" href="/adPost/category/books/request"><i class="newspaper outline icon"></i>CAT-II Notes</a>
-		<a class="list-group-item list-group-item-action" href="/adPost/category/books/request"class="item" >Others</a>
-    </div>
-</div>
-   <div class="ui left pointing simple dropdown item">
-    <i class="dropdown icon"></i>
-    <span class="text"><i class="microchip icon"></i>Project Components</span>
-    <div class="menu" style="margin-top:-42px; ">
-      <a class="item" class="list-group-item list-group-item-action" href="/adPost/category/project/request"><i class="rss icon"></i>Sensors</a>
-      <a class="item" class="list-group-item list-group-item-action" href="/adPost/category/project/request" ><i class="microchip icon"></i>Microcontrollers</a>
-		<a class="item" class="list-group-item list-group-item-action" href="/adPost/category/project/request" ><i class="code icon"></i>Others</a>
- 
-  </div>
-		</div>
-  <div class="ui left pointing simple dropdown item">
-    <i class="dropdown icon"></i>
-    <span class="text"><i class="futbol icon"></i>Sports & Outdoor</span>
-    <div class="menu" style="margin-top:-42px; ">
-      <a  class="item" class="list-group-item list-group-item-action" href="/adPost/category/project/request"class="item" ><i class="shopping bag icon"></i>Sports Wear</a>
-      
-      <a  class="item" class="list-group-item list-group-item-action" href="/adPost/category/project/request"class="item" ><i class="table tennis icon"></i>Sports Equipment</a>
-      
-      <a  class="item" class="list-group-item list-group-item-action" href="/adPost/category/project/request" class="item" ><i class="studiovinari icon"></i>Gym & Fitness</a>
-      <a  class="item" class="list-group-item list-group-item-action" href="/adPost/category/project/request" class="item" ><i class="gamepad icon"></i>Musical Instruments</a>
-		<a class="list-group-item list-group-item-action" href="/adPost/category/project/request"class="item" >Others</a>
-    </div>
-  </div>
-	   
-  <div class="ui left pointing simple dropdown item">
-    <i class="dropdown icon"></i>
-    <span class="text"><i class="shopping cart icon"></i>Fashion</span>
-    <div class="menu" style="margin-top:-40px; ">
-      <a class="item" class="list-group-item list-group-item-action" href="/adPost/category/Fashion/request" ><i class="fas fa-socks"></i> Footwear</a>
-      <a class="item" class="list-group-item list-group-item-action" href="/adPost/category/Fashion/request"  ><i class="fas fa-tshirt"></i> Clothing</a>
-      
-      <a class="item" class="list-group-item list-group-item-action" href="/adPost/category/Fashion/request"  ><i class="fas fa-clock"></i> Watch</a>
-      <a class="item" class="list-group-item list-group-item-action" href="/adPost/category/Fashion/request" ><i class="fas fa-glasses"></i> Coolers/spectacles</a>
-		<a class="list-group-item list-group-item-action" href="/adPost/category/Fashion/request"class="item" >Others</a>
-    </div>
-	  </div>
-  <div class="ui left pointing simple dropdown item">
-    <i class="dropdown icon"></i>
-    <span class="text"><i class="gem icon"></i>Jewelery & Cosmetics</span>
-    <div class="menu" style="margin-top:-42px; ">
-      <a class="list-group-item list-group-item-action" href="/adPost/category/Jewelery/request" class="item" ><i class="fas fa-ring"></i> Ring</a>
-     
-
-      <a class="list-group-item list-group-item-action" href="/adPost/category/Jewelery/request"  class="item" ><i class="fas fa-gem"></i> Jewelery</a>
-      
-      <a class="list-group-item list-group-item-action" href="/adPost/category/Jewelery/request"  class="item"  ><i class="fas fa-eye"></i> Cosmetics</a>
-		<a class="list-group-item list-group-item-action" href="/adPost/category/Jewelery/request"class="item" >Others</a>
-    </div>
-  </div>
-   <div class="ui left pointing simple dropdown item">
-    <i class="dropdown icon"></i>
-     <span class="text"><i class="fas fa-user-alt"></i> Personal Care</span>
-    
-    <div class="menu" style="margin-top: -42px">
-      <a class="list-group-item list-group-item-action" href="/adPost/category/Personal_Care/request"class="item" >Hair Dryer</a>
-     
-      <a class="list-group-item list-group-item-action" href="/adPost/category/Personal_Care/request"class="item" >Trimmers</a>
-  
-      <a class="list-group-item list-group-item-action" href="/adPost/category/Personal_Care/request"class="item" >Others</a>
-    </div>
-  </div>
-    <div class="ui left pointing simple dropdown item">
-    <i class="dropdown icon"></i>
-     <span class="text"><i class="fab fa-xbox"></i> Movies and Games/subscriptions</span>
-    
-    <div class="menu" style="margin-top: -42px">
-      <a class="list-group-item list-group-item-action" href="/adPost/category/Movie/request" class="item" ><i class="fas fa-video"></i> Movie Tickets</a>
-     
-      <a class="list-group-item list-group-item-action" href="/adPost/category/Movie/request"class="item" ><i class="gamepad icon"></i> Popular Games</a>
-      <a class="list-group-item list-group-item-action" href="/adPost/category/Movie/request" class="item" ><i class="fas fa-chess-board"></i> BoardGames/rubix</a>
-      
-  
-      <a class="list-group-item list-group-item-action" href="/adPost/category/Movie/request" class="item" > Other Subscriptions Sharing</a>
-  </div>
-	</div>
-  <div class="ui left pointing simple dropdown item">
-    <i class="dropdown icon"></i>
-     <span class="text"><i class="food icon"></i>Foods/Snacks</span>
-    
-    <div class="menu" style="margin-top: -42px">
-      <a class="list-group-item list-group-item-action" href="/adPost/category/Foods/request"class="item"><i class="utensils icon"></i>Food items</a>
-     
-      <a class="list-group-item list-group-item-action" href="/adPost/category/Foods/request"class="item"class="item"  ><i class="shopping basket icon"></i>Nutritious Food</a>
-  <a class="list-group-item list-group-item-action" href="/adPost/category/Foods/request"class="item" >Others</a>
-    </div>
-  </div>
-	  
-  <div class="ui left pointing simple dropdown item">
-    <i class="dropdown icon"></i>
-     <span class="text"><i class="gem icon"></i>Others</span>
-    
-    <div class="menu" style="margin-top: -42px">
-      <a class="list-group-item list-group-item-action" href="/adPost/category/others/request" class="item" ><i class="gift icon"></i> Gift Items</a>
-     
-      <a class="list-group-item list-group-item-action" href="/adPost/category/others/request" class="item" >Others</a>
-  
-    </div>
-  </div>
-	
-
-</div>
-</div>
-			</div>
-	
-				
-		
-			<div  class="row text-center" >
-		<div  style="width:380px;"  id="bo" class="col-lg-3 col-sm-5 col-xm-12 "  style=" padding-top: 20px; ">
-			<div  id="mobile" class="list-group">
-				  <a href="#" class="list-group-item btn btn-light list-group-item-action active" >
-					CATEGORIES
-				  </a>
-				
-			
-				
-	<div  style="width:330px" >
-	<div  class="ui fluid vertical menu">
-		
-	<div class="ui link item ">
-    
-	  
-    <a  href="/adPost/category/all/request" class="text"><i class="home icon"></i>ALL</a>
-
-  </div>
-  <div id="in1" class="ui fluid selection simple dropdown  ">
-    <i class="dropdown icon"></i>
-
-    <span class="text"><i class="mobile alternate icon"></i>Mobiles</span>
-    <div class="menu" >
-		<a class="list-group-item list-group-item-action" class="item" href="/adPost/category/mobile/request" ><i class="mobile alternate icon"></i>Mobile Phones</a>
-      
-      <a class="list-group-item list-group-item-action"class="item" href="/adPost/category/mobile/request"><i class="mobile icon"></i>Accessories</a>
-      
-      <a  class="list-group-item list-group-item-action" class="item"href="/adPost/category/mobile/request"><i class="tablet alternate icon"></i>Tablets</a>
-		<a class="list-group-item list-group-item-action" href="/adPost/category/mobile/request"class="item" >Others</a>
-    </div>
-  </div>
-  <div id="in2" class="ui fluid selection simple dropdown  ">
-    <i class="dropdown icon"></i>
-	  
-
-    <span class="text"><i class="computer icon"></i>Electronics & Appliances</span>
-    <div class="menu" >
-      <a class="item" class="list-group-item list-group-item-action" href="/adPost/category/electronics/request" ><i class="laptop icon"></i>Laptops</a>
-    
-      <a class="list-group-item list-group-item-action" href="/adPost/category/electronics/request" class="item" ><i class="calculator icon"></i>Calculator</a>
-      
-      <a class="list-group-item list-group-item-action" class="item" href="/adPost/category/electronics/request" ><i class="mouse pointer icon"></i>Mouse</a>
-    
-      <a class="list-group-item list-group-item-action"class="item" href="/adPost/category/electronics/request"><i class="hdd icon"></i>Hard Disks, Pendrives</a>
-      
-      <a class="list-group-item list-group-item-action" class="item" href="/adPost/category/electronics/request"><i class="camera retro icon"></i>Camera & Lenses</a>
-      
-      <a class="list-group-item list-group-item-action" class="item" href="/adPost/category/electronics/request" value="electronics" ><i class="itunes note icon"></i>Headphones & Speakers</a>
-    
-      <a class="list-group-item list-group-item-action" class="item" href="/adPost/category/electronics/request" value="electronics"  ><i class="gamepad icon"></i>Games & Entertainment</a>
-		<a class="list-group-item list-group-item-action" href="/adPost/category/electronics/request"class="item" >Others</a>
-    </div>
-  </div>
-		
-  <div id="in3" class="ui fluid selection simple dropdown  ">
-    <i class="dropdown icon"></i>
-    <span class="text"><i class="bicycle icon"></i>Cycle</span>
-    <div class="menu" >
-      <a class="list-group-item list-group-item-action" href="/adPost/category/cycle/request"  ><i class="bicycle icon"></i>Cycle</a>
-      <a class="list-group-item list-group-item-action" href="/adPost/category/cycle/request"  ><i class="fas fa-biking"></i>Cycle Ascessories</a>
-      <a class="list-group-item list-group-item-action" href="/adPost/category/cycle/request" ><i class="fas fa-motorcycle"></i>Cycle For Rent</a>
-		<a class="list-group-item list-group-item-action" href="/adPost/category/cycle/request"class="item" >Others</a>
-    </div>
-	  
-  </div>
-  <div id="in4" class="ui fluid selection simple dropdown  ">
-    <i class="dropdown icon"></i>
-    <span class="text"><i class="book icon"></i>Books & Notes</span>
-    <div class="menu" >
-      <a class="list-group-item list-group-item-action" href="/adPost/category/books/request"><i class="book icon"></i>Academic Books</a>
-      
-      <a class="list-group-item list-group-item-action" href="/adPost/category/books/request"><i class="book icon"></i>Novels</a>
-      
-      <a class="list-group-item list-group-item-action" href="/adPost/category/books/request"><i class="newspaper outline icon"></i>Class Notes</a>
-      
-      <a class="list-group-item list-group-item-action" href="/adPost/category/books/request"><i class="newspaper outline icon"></i>CAT-II Notes</a>
-		<a class="list-group-item list-group-item-action" href="/adPost/category/books/request"class="item" >Others</a>
-    </div>
-</div>
-   <div id="in5" class="ui fluid selection simple dropdown  ">
-    <i class="dropdown icon"></i>
-    <span class="text"><i class="microchip icon"></i>Project Components</span>
-    <div class="menu" >
-      <a class="item" class="list-group-item list-group-item-action" href="/adPost/category/project/request"><i class="rss icon"></i>Sensors</a>
-      <a class="item" class="list-group-item list-group-item-action" href="/adPost/category/project/request" ><i class="microchip icon"></i>Microcontrollers</a>
-		<a class="item" class="list-group-item list-group-item-action" href="/adPost/category/project/request" ><i class="code icon"></i>Others</a>
- 
-  </div>
-		</div>
-  <div id="in6" class="ui fluid selection simple dropdown  ">
-    <i class="dropdown icon"></i>
-    <span class="text"><i class="futbol icon"></i>Sports & Outdoor</span>
-    <div class="menu" >
-      <a  class="item" class="list-group-item list-group-item-action" href="/adPost/category/project"class="item" ><i class="shopping bag icon"></i>Sports Wear</a>
-      
-      <a  class="item" class="list-group-item list-group-item-action" href="/adPost/category/project/request"class="item" ><i class="table tennis icon"></i>Sports Equipment</a>
-      
-      <a  class="item" class="list-group-item list-group-item-action" href="/adPost/category/project/request" class="item" ><i class="studiovinari icon"></i>Gym & Fitness</a>
-      <a  class="item" class="list-group-item list-group-item-action" href="/adPost/category/project/request" class="item" ><i class="gamepad icon"></i>Musical Instruments</a>
-		<a class="list-group-item list-group-item-action" href="/adPost/category/project/request"class="item" >Others</a>
-    </div>
-  </div>
-	   
-  <div id="in7" class="ui fluid selection simple dropdown  ">
-    <i class="dropdown icon"></i>
-    <span class="text"><i class="shopping cart icon"></i>Fashion</span>
-    <div class="menu" >
-      <a class="item" class="list-group-item list-group-item-action" href="/adPost/category/Fashion/request" ><i class="fas fa-socks"></i>Footwear</a>
-      <a class="item" class="list-group-item list-group-item-action" href="/adPost/category/Fashion/request"  ><i class="fas fa-tshirt"></i> Clothing</a>
-      
-      <a class="item" class="list-group-item list-group-item-action" href="/adPost/category/Fashion/request"  ><i class="fas fa-clock"></i>Watch</a>
-      <a class="item" class="list-group-item list-group-item-action" href="/adPost/category/Fashion/request" ><i class="fas fa-glasses"></i> Coolers/spectacles</a>
-		<a class="list-group-item list-group-item-action" href="/adPost/category/Fashion/request"class="item" >Others</a>
-    </div>
-	  </div>
-  <div id="in8" class="ui fluid selection simple dropdown  ">
-    <i class="dropdown icon"></i>
-    <span class="text"><i class="gem icon"></i>Jewelery & Cosmetics</span>
-    <div class="menu" >
-      <a class="list-group-item list-group-item-action" href="/adPost/category/Jewelery/request" class="item" ><i class="fas fa-ring"></i>Ring</a>
-     
-
-      <a class="list-group-item list-group-item-action" href="/adPost/category/Jewelery/request"  class="item" ><i class="fas fa-gem"></i>Jewelery</a>
-      
-      <a class="list-group-item list-group-item-action" href="/adPost/category/Jewelery/request"  class="item"  ><i class="fas fa-eye"></i>Cosmetics</a>
-		<a class="list-group-item list-group-item-action" href="/adPost/category/Jewelery/request"class="item" >Others</a>
-    </div>
-  </div>
-   <div id="in9" class="ui fluid selection simple dropdown  ">
-    <i class="dropdown icon"></i>
-     <span class="text"><i class="fas fa-user-alt"></i>Personal Care</span>
-    
-    <div class="menu" >
-      <a class="list-group-item list-group-item-action" href="/adPost/category/Personal_Care/request"class="item" >Hair Dryer</a>
-     
-      <a class="list-group-item list-group-item-action" href="/adPost/category/Personal_Care/request"class="item" >Trimmers</a>
-  
-      <a class="list-group-item list-group-item-action" href="/adPost/category/Personal_Care/request"class="item" >Others</a>
-    </div>
-  </div>
-    <div id="in10" class="ui fluid selection simple dropdown  ">
-    <i class="dropdown icon"></i>
-     <span class="text"><i class="fab fa-xbox"></i>Movies and Games/subscriptions</span>
-    
-    <div class="menu" >
-      <a class="list-group-item list-group-item-action" href="/adPost/category/Movie/request" class="item" ><i class="fas fa-video"></i>Movie Tickets</a>
-     
-      <a class="list-group-item list-group-item-action" href="/adPost/category/Movie/request"class="item" ><i class="gamepad icon"></i>Popular Games</a>
-      <a class="list-group-item list-group-item-action" href="/adPost/category/Movie/request" class="item" ><i class="fas fa-chess-board"></i> BoardGames/rubix</a>
-      
-  
-      <a class="list-group-item list-group-item-action" href="/adPost/category/Movie/request" class="item" >Other Subscriptions Sharing</a>
-		<a class="list-group-item list-group-item-action" href="/adPost/category/Movie/request"class="item" >Others</a>
-  </div>
-	</div>
-  <div id="in11" class="ui fluid selection simple dropdown  ">
-    <i class="dropdown icon"></i>
-     <span class="text"><i class="food icon"></i>Foods/Snacks</span>
-    
-    <div class="menu" >
-      <a class="list-group-item list-group-item-action" href="/adPost/category/Foods/request"class="item"><i class="utensils icon"></i>Food items</a>
-     
-      <a class="list-group-item list-group-item-action" href="/adPost/category/Foods/request"class="item"class="item"  ><i class="shopping basket icon"></i>Nutritious Food</a>
-		<a class="list-group-item list-group-item-action" href="/adPost/category/Fodds/request"class="item" >Others</a>
-  
-    </div>
-  </div>
-	  
-  <div id="in12" class="ui fluid selection simple dropdown  ">
-    <i class="dropdown icon"></i>
-     <span class="text"><i class="gem icon"></i>Others</span>
-    
-    <div class="menu" >
-      <a class="list-group-item list-group-item-action" href="/adPost/category/others/request" class="item" ><i class="gift icon"></i>Gift Items</a>
-     
-      <a class="list-group-item list-group-item-action" href="/adPost/category/others/request" class="item" >Others</a>
-  
-    </div>
-  </div>
-	
-
-</div>
-</div>
-
-			</div>
-				</div>
-			</div>
-	</div>
-	
-				
-			
-		
-	<div class="col-lg-9" > 
-		<a  href="/adPost/category2" data-toggle="tooltip" data-placement="top" title="POST YOUR JOURNEY">
-  <i style="margin-left:-1%; margin-top:2%;" class="fas fa-plus-circle fa-3x"></i>
-			<p>
-			POST YOUR JOURNEY
-			</p>
+<style>@media only screen and (max-width:700px){#cad{margin:10px;margin-left:20px;width:320px}#cat{max-width:600px;margin-left:5%}#bo{border:2px solid grey}#ple{max-width:368px}#big{display:none}#in1:hover{margin-bottom:160px}#in2:hover{margin-bottom:300px}#in3:hover{margin-bottom:160px}#in4:hover{margin-bottom:200px}#in5:hover{margin-bottom:160px}#in6:hover{margin-bottom:200px}#in7:hover{margin-bottom:200px}#in8:hover{margin-bottom:160px}#in9:hover{margin-bottom:160px}#in10:hover{margin-bottom:160px}#in11:hover{margin-bottom:120px}#in12:hover{margin-bottom:120px}@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300);#cssmenu{position:relative;margin:0;font-family:'Roboto Condensed';line-height:1;width:270px}.align-right{float:right}#cssmenu ul{margin:0;padding:0;list-style:none;display:block;background-color:white;color:black}#cssmenu ul li{position:relative;margin:0;padding:0;width:270px;background-color:white;color:black}#cssmenu ul li a{text-decoration:none;cursor:pointer;color:black}#cssmenu>ul>li>a{color:black;text-transform:uppercase;display:block;padding:20px;border-top:1px solid #000;border-left:1px solid #000;border-right:1px solid #000;background-color:white;box-shadow:inset 0 1px 0 rgba(255,255,255,0.1);letter-spacing:1px;font-size:16px;font-weight:300;-webkit-transition:all .25s ease-in;-moz-transition:all .25s ease-in;-ms-transition:all .25s ease-in;-o-transition:all .25s ease-in;transition:all .25s ease-in;position:relative}#cssmenu>ul>li:first-child>a{border-top-left-radius:3px;border-top-right-radius:3px}#cssmenu>ul>li:last-child>a{border-bottom-left-radius:3px;border-bottom-right-radius:3px;border-bottom:1px solid #000}#cssmenu>ul>li:hover>a,#cssmenu>ul>li.open>a,#cssmenu>ul>li.active>a{background:#151515;color:white}#cssmenu ul>li.has-sub>a::after{content:"";position:absolute;display:block;width:0;height:0;border-top:13px solid #000;border-botom:13px solid transparent;border-left:125px solid transparent;border-right:125px solid transparent;left:0;bottom:-13px;bottom:0;z-index:1;opacity:0;-webkit-transition:all .2s ease;-moz-transition:all .2s ease;-ms-transition:all .2s ease;-o-transition:all .2s ease;transition:all .2s ease}#cssmenu ul>li.has-sub>a::before{content:"";position:absolute;display:block;width:0;height:0;border-top:13px solid #151515;border-botom:13px solid transparent;border-left:125px solid transparent;border-right:125px solid transparent;left:0;bottom:-12px;bottom:-1px;z-index:3;opacity:0;-webkit-transition:all .2s ease;-moz-transition:all .2s ease;-ms-transition:all .2s ease;-o-transition:all .2s ease;transition:all .2s ease}#cssmenu ul>li.has-sub::after{content:"";display:block;position:absolute;width:0;height:0;border:7px solid transparent;border-top-color:#ddd;z-index:2;right:20px;top:24.5px;pointer-events:none}#cssmenu ul>li:hover::after,#cssmenu ul>li.active::after,#cssmenu ul>li.open::after{border-top-color:#fff}#cssmenu ul>li.has-sub.open>a::after{opacity:1;bottom:-13px}#cssmenu ul>li.has-sub.open>a::before{opacity:1;bottom:-12px}#cssmenu ul ul{display:none}#cssmenu ul ul li{border-left:1px solid #ccc;border-right:1px solid #ccc}#cssmenu ul ul li a{background:#f1f1f1;display:block;position:relative;font-size:15px;padding:14px 20px;border-bottom:1px solid #ddd;color:#777;font-weight:300;-webkit-transition:all .25s ease-in;-moz-transition:all .25s ease-in;-ms-transition:all .25s ease-in;-o-transition:all .25s ease-in;transition:all .25s ease-in}#cssmenu ul ul li:first-child>a{padding-top:18px}#cssmenu ul ul ul li{border:0}#cssmenu ul ul li:hover>a,#cssmenu ul ul li.open>a,#cssmenu ul ul li.active>a{background:#e4e4e4;color:#666}#cssmenu ul ul>li.has-sub>a::after{border-top:13px solid #ddd}#cssmenu ul ul>li.has-sub>a::before{border-top:13px solid #e4e4e4}#cssmenu ul ul ul li a{padding-left:30px}#cssmenu ul ul>li.has-sub::after{top:18.5px;border-width:6px;border-top-color:#777}#cssmenu ul ul>li:hover::after,#cssmenu ul ul>li.active::after,#cssmenu ul ul>li.open::after{border-top-color:#666}}@media only screen and (min-width:1200px){#cad{margin:25px;width:460px;margin-left:5%}#new{margin-top:3px;float:right}#imm{margin-right:20px}#cssmenu{display:none}#ple{max-width:300px}}</style>
+<div class="row text-center" style="display:flex">
+<div id="ple" class="col-lg-3 col-sm-5 col-xm-12" style="border:2px solid grey;padding-top:20px">
+<div style="width:280px" id="big"class="list-group">
+<a href="#" class="list-group-item btn btn-light list-group-item-action active">
+CATEGORIES
 </a>
-		
-		<hr>
-		<% allreq.forEach(function(adpost){%>
-		
-	
-	
-		<div id="cad" style="margin-top :60px;  float:left; hegith950px;" class="col-lg-3 ui raised card">
-		  <div class="content">
-			<div class="header"><%= adpost.reqTitle %></div>
-			  <% if(currentUser && adpost.author.id.equals(currentUser._id) || currentUser && currentUser.isAdmin){ %>
-					
-									<!-- <div class="float-right">
-					<a class="btn btn-success" href = "/campgrounds/<%= adpost._id %>/comments/new">Add New Comment</a>
-				                   </div> -->
-
-						
-									<form id="delete-form" action="/adPost/request/<%= adpost._id %>?_method=DELETE" method="POST">
-									<button style="margin-bottom:20px;margin-top:-10px;float:right;" class="btn btn-danger">DELETE</button>	
-										
-										
-									</form>
-				
-						<% } %>
-			<div class="meta">
-			  <span class="category">Expected-range:RS.<%= adpost.priceRange %></span>
-			</div>
-			<div style="height:70px;" class="description">
-			  <p><%= adpost.description %> <%= moment(adpost.createdAt).fromNow() %></p>
-			</div>
-		  </div>
-  <div class="extra content">
-    <div class="right floated author">
-		<p style="float:left; margin-right:100px">
-			<%= adpost.block %> <%= adpost.Phone %>
-		</p>
-      <img id="imm"  class="ui avatar image" src="https://f0.pngfuel.com/png/980/304/man-profile-illustration-computer-icons-user-profile-avatar-png-clip-art.png"><span id="new"  ><%= adpost.author.name %>
-		</span>
-		
-				
-    </div>
-  </div>
-			</div>
-		<% }); %>
-
-		</div>
-	
-</div>			
-
-	
-
-
-
-
-
-			
-
+<div style="max-width:600px">
+<div class="ui fluid vertical menu">
+<div class="ui link item">
+<a href="/adPost/category/all/request" class="text"><i class="home icon"></i>ALL</a>
+</div>
+<div class="ui left pointing simple dropdown link item">
+<i class="dropdown icon"></i>
+<span class="text"><i class="mobile alternate icon"></i>Mobiles</span>
+<div class="menu" style="margin-top:-42px">
+<a class="list-group-item list-group-item-action" class="item" href="/adPost/category/mobile/request"><i class="mobile alternate icon"></i>Mobile Phones</a>
+<a class="list-group-item list-group-item-action"class="item" href="/adPost/category/mobile/request"><i class="mobile icon"></i>Accessories</a>
+<a class="list-group-item list-group-item-action" class="item"href="/adPost/category/mobile/request"><i class="tablet alternate icon"></i>Tablets</a>
+<a class="list-group-item list-group-item-action" href="/adPost/category/mobile/request"class="item">Others</a>
+</div>
+</div>
+<div class="ui left pointing simple dropdown item">
+<i class="dropdown icon"></i>
+<span class="text"><i class="computer icon"></i>Electronics & Appliances</span>
+<div class="menu" style="margin-top:-42px">
+<a class="item" class="list-group-item list-group-item-action" href="/adPost/category/electronics/request"><i class="laptop icon"></i>Laptops</a>
+<a class="list-group-item list-group-item-action" href="/adPost/category/electronics/request" class="item"><i class="calculator icon"></i>Calculator</a>
+<a class="list-group-item list-group-item-action" class="item" href="/adPost/category/electronics/request"><i class="mouse pointer icon"></i>Mouse</a>
+<a class="list-group-item list-group-item-action"class="item" href="/adPost/category/electronics/request"><i class="hdd icon"></i>Hard Disks, Pendrives</a>
+<a class="list-group-item list-group-item-action" class="item" href="/adPost/category/electronics/request"><i class="camera retro icon"></i>Camera & Lenses/Lamps</a>
+<a class="list-group-item list-group-item-action" class="item" href="/adPost/category/electronics/request" value="electronics"><i class="itunes note icon"></i>Headphones & Speakers</a>
+<a class="list-group-item list-group-item-action" class="item" href="/adPost/category/electronics/request" value="electronics"><i class="gamepad icon"></i>Games & Entertainment</a>
+<a class="list-group-item list-group-item-action" href="/adPost/category/electronics/request"class="item">Others</a>
+</div>
+</div>
+<div class="ui left pointing simple dropdown item">
+<i class="dropdown icon"></i>
+<span class="text"><i class="bicycle icon"></i>Cycle</span>
+<div class="menu" style="margin-top:-45px">
+<a class="list-group-item list-group-item-action" href="/adPost/category/cycle/request"><i class="bicycle icon"></i>Cycle</a>
+<a class="list-group-item list-group-item-action" href="/adPost/category/cycle/request"><i class="fas fa-biking"></i> Cycle Ascessories</a>
+<a class="list-group-item list-group-item-action" href="/adPost/category/cycle/request"><i class="fas fa-motorcycle"></i> Cycle For Rent</a>
+<a class="list-group-item list-group-item-action" href="/adPost/category/cycle/request"class="item">Others</a>
+</div>
+</div>
+<div class="ui left pointing simple dropdown item">
+<i class="dropdown icon"></i>
+<span class="text"><i class="book icon"></i>Books & Notes</span>
+<div class="menu" style="margin-top:-42px">
+<a class="list-group-item list-group-item-action" href="/adPost/category/books/request"><i class="book icon"></i>Academic Books</a>
+<a class="list-group-item list-group-item-action" href="/adPost/category/books/request"><i class="book icon"></i>Novels</a>
+<a class="list-group-item list-group-item-action" href="/adPost/category/books/request"><i class="newspaper outline icon"></i>Class Notes</a>
+<a class="list-group-item list-group-item-action" href="/adPost/category/books/request"><i class="newspaper outline icon"></i>CAT-II Notes</a>
+<a class="list-group-item list-group-item-action" href="/adPost/category/books/request"class="item">Others</a>
+</div>
+</div>
+<div class="ui left pointing simple dropdown item">
+<i class="dropdown icon"></i>
+<span class="text"><i class="microchip icon"></i>Project Components</span>
+<div class="menu" style="margin-top:-42px">
+<a class="item" class="list-group-item list-group-item-action" href="/adPost/category/project/request"><i class="rss icon"></i>Sensors</a>
+<a class="item" class="list-group-item list-group-item-action" href="/adPost/category/project/request"><i class="microchip icon"></i>Microcontrollers</a>
+<a class="item" class="list-group-item list-group-item-action" href="/adPost/category/project/request"><i class="code icon"></i>Others</a>
+</div>
+</div>
+<div class="ui left pointing simple dropdown item">
+<i class="dropdown icon"></i>
+<span class="text"><i class="futbol icon"></i>Sports & Outdoor</span>
+<div class="menu" style="margin-top:-42px">
+<a class="item" class="list-group-item list-group-item-action" href="/adPost/category/project/request"class="item"><i class="shopping bag icon"></i>Sports Wear</a>
+<a class="item" class="list-group-item list-group-item-action" href="/adPost/category/project/request"class="item"><i class="table tennis icon"></i>Sports Equipment</a>
+<a class="item" class="list-group-item list-group-item-action" href="/adPost/category/project/request" class="item"><i class="studiovinari icon"></i>Gym & Fitness</a>
+<a class="item" class="list-group-item list-group-item-action" href="/adPost/category/project/request" class="item"><i class="gamepad icon"></i>Musical Instruments</a>
+<a class="list-group-item list-group-item-action" href="/adPost/category/project/request"class="item">Others</a>
+</div>
+</div>
+<div class="ui left pointing simple dropdown item">
+<i class="dropdown icon"></i>
+<span class="text"><i class="shopping cart icon"></i>Fashion</span>
+<div class="menu" style="margin-top:-40px">
+<a class="item" class="list-group-item list-group-item-action" href="/adPost/category/Fashion/request"><i class="fas fa-socks"></i> Footwear</a>
+<a class="item" class="list-group-item list-group-item-action" href="/adPost/category/Fashion/request"><i class="fas fa-tshirt"></i> Clothing</a>
+<a class="item" class="list-group-item list-group-item-action" href="/adPost/category/Fashion/request"><i class="fas fa-clock"></i> Watch</a>
+<a class="item" class="list-group-item list-group-item-action" href="/adPost/category/Fashion/request"><i class="fas fa-glasses"></i> Coolers/spectacles</a>
+<a class="list-group-item list-group-item-action" href="/adPost/category/Fashion/request"class="item">Others</a>
+</div>
+</div>
+<div class="ui left pointing simple dropdown item">
+<i class="dropdown icon"></i>
+<span class="text"><i class="gem icon"></i>Jewelery & Cosmetics</span>
+<div class="menu" style="margin-top:-42px">
+<a class="list-group-item list-group-item-action" href="/adPost/category/Jewelery/request" class="item"><i class="fas fa-ring"></i> Ring</a>
+<a class="list-group-item list-group-item-action" href="/adPost/category/Jewelery/request" class="item"><i class="fas fa-gem"></i> Jewelery</a>
+<a class="list-group-item list-group-item-action" href="/adPost/category/Jewelery/request" class="item"><i class="fas fa-eye"></i> Cosmetics</a>
+<a class="list-group-item list-group-item-action" href="/adPost/category/Jewelery/request"class="item">Others</a>
+</div>
+</div>
+<div class="ui left pointing simple dropdown item">
+<i class="dropdown icon"></i>
+<span class="text"><i class="fas fa-user-alt"></i> Personal Care</span>
+<div class="menu" style="margin-top:-42px">
+<a class="list-group-item list-group-item-action" href="/adPost/category/Personal_Care/request"class="item">Hair Dryer</a>
+<a class="list-group-item list-group-item-action" href="/adPost/category/Personal_Care/request"class="item">Trimmers</a>
+<a class="list-group-item list-group-item-action" href="/adPost/category/Personal_Care/request"class="item">Others</a>
+</div>
+</div>
+<div class="ui left pointing simple dropdown item">
+<i class="dropdown icon"></i>
+<span class="text"><i class="fab fa-xbox"></i> Movies and Games/subscriptions</span>
+<div class="menu" style="margin-top:-42px">
+<a class="list-group-item list-group-item-action" href="/adPost/category/Movie/request" class="item"><i class="fas fa-video"></i> Movie Tickets</a>
+<a class="list-group-item list-group-item-action" href="/adPost/category/Movie/request"class="item"><i class="gamepad icon"></i> Popular Games</a>
+<a class="list-group-item list-group-item-action" href="/adPost/category/Movie/request" class="item"><i class="fas fa-chess-board"></i> BoardGames/rubix</a>
+<a class="list-group-item list-group-item-action" href="/adPost/category/Movie/request" class="item"> Other Subscriptions Sharing</a>
+</div>
+</div>
+<div class="ui left pointing simple dropdown item">
+<i class="dropdown icon"></i>
+<span class="text"><i class="food icon"></i>Foods/Snacks</span>
+<div class="menu" style="margin-top:-42px">
+<a class="list-group-item list-group-item-action" href="/adPost/category/Foods/request"class="item"><i class="utensils icon"></i>Food items</a>
+<a class="list-group-item list-group-item-action" href="/adPost/category/Foods/request"class="item"class="item"><i class="shopping basket icon"></i>Nutritious Food</a>
+<a class="list-group-item list-group-item-action" href="/adPost/category/Foods/request"class="item">Others</a>
+</div>
+</div>
+<div class="ui left pointing simple dropdown item">
+<i class="dropdown icon"></i>
+<span class="text"><i class="gem icon"></i>Others</span>
+<div class="menu" style="margin-top:-42px">
+<a class="list-group-item list-group-item-action" href="/adPost/category/others/request" class="item"><i class="gift icon"></i> Gift Items</a>
+<a class="list-group-item list-group-item-action" href="/adPost/category/others/request" class="item">Others</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row text-center">
+<div style="width:380px" id="bo" class="col-lg-3 col-sm-5 col-xm-12" style=" padding-top: 20px; ">
+<div id="cssmenu" class="list-group text-left">
+<ul>
+<li><a><span>&nbsp;<b>CATEGORY</b></span></a>
+</li>
+<li><a href='/adpost/category/all'><span>All</span></a>
+<li><a href='/adpost/category/all/request'><span>All</span></a>
+</li>
+<li class='has-sub'><a href='#'><span><i class="mobile alternate icon"></i>&nbsp;Mobiles</span></a>
+<ul>
+<li><a href='/adPost/category/mobile/request'><span><i class="mobile alternate icon"></i>&nbsp;Mobile Phones</span></a>
+</li>
+<li><a href='/adPost/category/mobile/request'><span><i class="mobile icon"></i>&nbsp;Accessories</span></a>
+</li>
+<li><a href='/adPost/category/mobile/request'><span><i class="tablet alternate icon"></i>&nbsp;Tablets</span></a>
+</li>
+<li><a href='/adPost/category/mobile/request'><span><i class="gem icon"></i>&nbsp;Others</span></a>
+</li>
+</ul>
+</li>
+<li class='has-sub'><a href='#'><span><i class="computer icon"></i>&nbsp;Electronics & Appliances</span></a>
+<ul>
+<li><a href='/adPost/category/electronics/request'><span><i class="calculator icon"></i>&nbsp;Calculator</span></a>
+</li>
+<li><a href='/adPost/category/electronics/request'><span><i class="mouse pointer icon"></i>&nbsp;Mouse</span></a>
+</li>
+<li><a href='/adPost/category/electronics/request'><span><i class="hdd icon"></i>&nbsp;Hard disks & Pendrives</span></a>
+</li>
+<li><a href='/adPost/category/electronics/request'><span><i class="camera retro icon"></i>&nbsp;Camera & Lenses</span></a>
+</li>
+<li><a href='/adPost/category/electronics/request'><span><i class="itunes note icon"></i>&nbsp;Headphones & Speakers</span></a>
+</li>
+<li><a href='/adPost/category/electronics/request'><span><i class="gamepad icon"></i>&nbsp;Games & Entertainment</span></a>
+</li>
+<li><a href='/adPost/category/electronics/request'><span><i class="gem icon"></i>&nbsp;Others</span></a>
+</li>
+</ul>
+</li>
+<li class='has-sub'><a href='#'><span><i class="bicycle icon"></i>&nbsp;Cycle</span></a>
+<ul>
+<li><a href='/adPost/category/cycle/request'><span><i class="bicycle icon"></i>&nbsp;Cycle</span></a>
+</li>
+<li><a href='/adPost/category/cycle/request'><span><i class="fas fa-biking"></i>&nbsp;Cycle Accessories</span></a>
+</li>
+<li><a href='/adPost/category/cycle/request'><span><i class="gem icon"></i>&nbsp;Others</span></a>
+</li>
+</ul>
+</li>
+<li class='has-sub'><a href='#'><span><i class="book icon"></i>&nbsp;Books & Notes</span></a>
+<ul>
+<li><a href='/adPost/category/books/request'><span><i class="book icon"></i>&nbsp;Academic Books</span></a>
+</li>
+<li><a href='/adPost/category/books/request'><span><i class="newspaper outline icon"></i>&nbsp;Cat 2 Notes</span></a>
+</li>
+<li><a href='/adPost/category/books/request'><span><i class="newspaper outline icon"></i>&nbsp;Class Notes</span></a>
+</li>
+<li><a href='/adPost/category/books/request'><span><i class="book icon"></i>&nbsp;Novels</span></a>
+</li>
+<li><a href='/adPost/category/books/request'><span><i class="gem icon"></i>&nbsp;Others</span></a>
+</li>
+</ul>
+</li>
+<li class='has-sub'><a href='#'><span><i class="microchip icon"></i>&nbsp;Project Components</span></a>
+<ul>
+<li><a href='/adPost/category/project/request'><span><i class="rss icon"></i>&nbsp;Sensors</span></a>
+</li>
+<li><a href='/adPost/category/project/request'><span><i class="microchip icon"></i>&nbsp;Microcontrollers</span></a>
+</li>
+<li><a href='/adPost/category/project/request'><span><i class="gem icon"></i>Others</span></a>
+</li>
+</ul>
+</li>
+<li class='has-sub'><a href='#'><span><i class="futbol icon"></i>&nbsp;Sports & Outdoor</span></a>
+<ul>
+<li><a href='/adPost/category/Sports/request'><span><i class="table tennis icon"></i>&nbsp;Sports Equipment</span></a>
+</li>
+<li><a href='/adPost/category/Sports/request'><span><i class="shopping bag icon"></i>&nbsp;Sports Wear</span></a>
+</li>
+<li><a href='/adPost/category/Sports/request'><span><i class="studiovinari icon"></i>&nbsp;Gym & Fitness</span></a>
+</li>
+<li><a href='/adPost/category/Sports/request'><span><i class="gamepad icon"></i>&nbsp;Musical Instruments</span></a>
+</li>
+<li><a href='/adPost/category/Sports/request'><span><i class="gem icon"></i>&nbsp;Others</span></a>
+</li>
+</ul>
+</li>
+<li class='has-sub'><a href='#'><span><i class="shopping cart icon"></i>&nbsp;Fashion</span></a>
+<ul>
+<li><a href='/adPost/category/Fashion/request'><span><i class="fas fa-socks"></i>&nbsp;Footwear</span></a>
+</li>
+<li><a href='/adPost/category/Fashion/request'><span><i class="fas fa-tshirt"></i>&nbsp;Clothing</span></a>
+</li>
+<li><a href='/adPost/category/Fashion/request'><span><i class="fas fa-clock"></i>&nbsp;Watch</span></a>
+</li>
+<li><a href='/adPost/category/Fashion/request'><span><i class="fas fa-glasses"></i>&nbsp;Coolers/spectacles</span></a>
+</li>
+<li><a href='/adPost/category/Fashion/request'><span><i class="gem icon"></i>&nbsp;Others</span></a>
+</li>
+</ul>
+</li>
+<li class='has-sub'><a href='#'><span><i class="gem icon"></i>&nbsp;Jewelery & Cosmetics</span></a>
+<ul>
+<li><a href='/adPost/category/Jewelery/request'><span><i class="fas fa-gem"></i>&nbsp;Jewlery</span></a>
+</li>
+<li><a href='/adPost/category/Jewelery/request'><span><i class="fas fa-eye"></i>&nbsp;Cosmetics</span></a>
+</li>
+<li><a href='/adPost/category/Jewelery/request'><span><i class="gem icon"></i>&nbsp;Others</span></a>
+</li>
+</ul>
+</li>
+<li class='has-sub'><a href='#'><span><i class="fas fa-user-alt"></i>&nbsp;Personal Care</span></a>
+<ul>
+<li><a href='/adPost/category/Personal_Care/request'><span><i class="far fa-hdd"></i>&nbsp;Hair Dryer</span></a>
+</li>
+<li><a href='/adPost/category/Personal_Care/request'><span><i class="far fa-hdd"></i>&nbsp;Trimmer</span></a>
+</li>
+<li><a href='/adPost/category/Personal_Care/request'><span><i class="gem icon"></i>&nbsp;Others</span></a>
+</li>
+</ul>
+</li>
+<li class='has-sub'><a href='#'><span><i class="fab fa-xbox"></i>&nbsp;Movies and Games/subscriptions</span></a>
+<ul>
+<li><a href='/adPost/category/Movies/request'><span><i class="fas fa-video"></i>&nbsp;Movie Tickets</span></a>
+</li>
+<li><a href='/adPost/category/Movies/request'><span><i class="gamepad icon"></i>&nbsp;PC Games</span></a>
+</li>
+<li><a href='/adPost/category/Movies/request'><span><i class="fas fa-chess-board"></i>&nbsp; BoardGames/rubix</span></a>
+</li>
+<li><a href='/adPost/category/Movies/request'><span><i class="gem icon"></i>&nbsp;Others</span></a>
+</li>
+</ul>
+</li>
+<li class='has-sub'><a href='#'><span><i class="food icon"></i>&nbsp;Foods/Snacks</span></a>
+<ul>
+<li><a href='/adPost/category/Foods/request'><span><i class="utensils icon"></i>&nbsp;Food Items</span></a>
+</li>
+<li><a href='/adPost/category/Foods/request'><span><i class="shopping basket icon"></i>&nbsp;Nutritious Foods</span></a>
+</li>
+<li><a href='/adPost/category/Foods/request'><span><i class="gem icon"></i>&nbsp;Others</span></a>
+</li>
+</ul>
+</li>
+<li class='has-sub'><a href='#'><span><i class="gem icon"></i>&nbsp;Others</span></a>
+<ul>
+<li><a href='/adPost/category/others/request'><span><i class="gift icon"></i>&nbsp;Gift Items</span></a>
+</li>
+<li><a href='/adPost/category/others/request'><span><i class="gem icon"></i>&nbsp;Others</span></a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-9">
+<a href="/adPost/category2" data-toggle="tooltip" data-placement="top" title="POST YOUR ADS">
+<i style="margin-left:-1%;margin-top:2%" class="fas fa-plus-circle fa-3x"></i>
+<p>
+POST YOUR ADS
+</p>
+</a>
+<hr>
+<% allreq.forEach(function(adpost){%>
+<div id="cad" style="margin-top:60px;float:left;hegith950px" class="col-lg-3 ui raised card">
+<div class="content">
+<div class="header"><%= adpost.reqTitle %></div>
+<% if(currentUser && adpost.author.id.equals(currentUser._id) || currentUser && currentUser.isAdmin){ %>
+<form id="delete-form" action="/adPost/request/<%= adpost._id %>?_method=DELETE" method="POST">
+<button style="margin-bottom:20px;margin-top:-10px;float:right" class="btn btn-danger">DELETE</button>
+</form>
+<% } %>
+<div class="meta">
+<span class="category">Expected-range:RS.<%= adpost.priceRange %></span>
+</div>
+<div style="height:70px" class="description">
+<p><%= adpost.description %> <%= moment(adpost.createdAt).fromNow() %></p>
+</div>
+</div>
+<div class="extra content">
+<div class="right floated author">
+<p style="float:left;margin-right:100px">
+<%= adpost.block %> <%= adpost.Phone %>
+</p>
+<img id="imm" class="ui avatar image" src="https://f0.pngfuel.com/png/980/304/man-profile-illustration-computer-icons-user-profile-avatar-png-clip-art.png"><span id="new"><%= adpost.author.name %>
+</span>
+</div>
+</div>
+</div>
+<% }); %>
+</div>
+</div>
+<script>(function(a){a(document).ready(function(){a("#cssmenu li.has-sub>a").on("click",function(){a(this).removeAttr("href");var b=a(this).parent("li");if(b.hasClass("open")){b.removeClass("open");b.find("li").removeClass("open");b.find("ul").slideUp()}else{b.addClass("open");b.children("ul").slideDown();b.siblings("li").children("ul").slideUp();b.siblings("li").removeClass("open");b.siblings("li").find("li").removeClass("open");b.siblings("li").find("ul").slideUp()}})})})(jQuery);</script>
 <% include ../partials/footer %>

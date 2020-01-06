@@ -84,21 +84,7 @@ router.get("/register/admin", function(req,res){
 })
 //HANDLE SIGN UP LOGIC
 router.post("/register", function(req,res){
-	// var newUser = new User({username: req.body.username,  name: req.body.name, year: req.body.year});
 	
-	// if(req.body.adminCode === "secretcode123"){
-	// 	newUser.isAdmin = true;
-	// }
-	// User.register(newUser, req.body.password, function(err, user){
-	// 	if(err){
-	// console.log(err);
-	// return res.render("register", {error: err.message});
-	// 		}
-	// 	passport.authenticate("local")(req, res, function(){
-	// 		req.flash("success","Welcome to vitblog" + user.username);
-	// 		res.redirect("/adPost");
-	// 	});
-	// });
 	async.waterfall([
 	function(done) {
 	crypto.randomBytes(20, function(err, buf) {
@@ -109,7 +95,7 @@ router.post("/register", function(req,res){
 	function(token, done) {
 					User.findOne({ username: req.body.username }, function(err, user) {
 					if (user && user.verified) {
-					req.flash('error', 'account with that email address exists.');
+					req.flash('error', 'Oops! this Email Id has already been registered. ');
 					return res.redirect('/login');
 					}
 					else if(user && !(user.verified)){

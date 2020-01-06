@@ -1,96 +1,49 @@
-
 <% include ./partials/header %>
-<style>
-@media only screen and (max-width: 700px) {
-			#divid{
-				display:none
-				
-			}
-	#dividm{
-		margin-left:43%;
-	}
-	
-	}
-@media only screen and (min-width: 1200px) {
-			#divid{
-			margin-left:50%;
-				
-				
-				
-			}
-	#dividm{
-display:none;}
-	}
-	#forr:hover{
-		text-decoration:underline;
-	}
-
-</style>
-
-	
-
-
-
-<div style="margin-bottom:200px;" class="responsive container">
-	
-
-		<div class="row">
-			
-			<div class="col-md-12">
-			
-		</div>
+<style>@media only screen and (max-width:700px){#divid{display:none}#dividm{margin-left:43%}}@media only screen and (min-width:1200px){#divid{margin-left:50%}#dividm{display:none}}#forr:hover{text-decoration:underline}</style>
+<div style="margin-bottom:200px" class="responsive container">
+<div class="row">
+<div class="col-md-12">
 </div>
-	
-	
-<div style="margin-top:10%;" class="ui placeholder segment">
-  <div class="ui two column very relaxed stackable grid">
-    <div class="column">
+</div>
+<div style="margin-top:10%" class="ui placeholder segment">
+<div class="ui two column very relaxed stackable grid">
+<div class="column">
 <form class="form-signin" action="/login" method="POST">
-	
-		<h1 class="h3 mb-3 font-weight-normal text-center">Please sign in</h1>
-      <div class="ui form">
-        <div class="field">
-          <label>Email</label>
-          <div class="ui left icon input">
-            <input type="text" name="username" placeholder="Username">
-            <i class="user icon"></i>
-          </div>
-        </div>
-        <div class="field">
-          <label>Password</label>
-          <div class="ui left icon input">
-            <input name="password" type="password">
-            <i class="lock icon"></i>
-          </div>
-        </div>
-        <button class=" form-grounp ui blue submit button">Login</button>
-      </div>
-	<!-- <a style="margin-left:32%;margin-top:4px;" href="/auth/facebook" class="btn btn-primary"><span style="padding-right:20px;"class="fa fa-facebook"></span>facebook</a> -->
-	<div style="margin-top:20px;" class="text-center">
-		<a   id="forr" style="color:blue;" href="/forgot">Forgot Password?</a>
-    </div>
-
-		</form>
-	</div>
-	  <div id="divid" class="ui vertical divider">
-		  or
-		  
-	  </div>
-<div id="dividm" >
-	<h3>or</h3>
-		  
-	  </div>
-	  
-    <div class="middle aligned column">
-		
-      <div class="ui big button mb-2">
-        <i class="signup icon"></i>
-        <a href="/register">Sign Up</a>
-      </div>
-    </div>
-  </div>
-
-
-
+<h1 class="h3 mb-3 font-weight-normal text-center">Please sign in</h1>
+<div class="ui form">
+<div class="field">
+<label>Email</label>
+<div class="ui left icon input">
+<input type="text" name="username" placeholder="Username">
+<i class="user icon"></i>
+</div>
+</div>
+<div class="field">
+<label>Password</label>
+<div class="ui left icon input">
+<input name="password" type="password">
+<i class="lock icon"></i>
+</div>
+</div>
+<button class="form-grounp ui blue submit button">Login</button>
+</div>
+<div style="margin-top:20px" class="text-center">
+<a id="forr" style="color:blue" href="/forgot">Forgot Password?</a>
+</div>
+</form>
+</div>
+<div id="divid" class="ui vertical divider">
+or
+</div>
+<div id="dividm">
+<h3>or</h3>
+</div>
+<div class="middle aligned column">
+<div class="ui big button mb-2">
+<i class="signup icon"></i>
+<a href="/register">Sign Up</a>
+</div>
+</div>
+</div>
 </div>
 <% include ./partials/footer %>

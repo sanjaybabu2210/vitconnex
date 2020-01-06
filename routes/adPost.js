@@ -31,7 +31,7 @@ var cloudinary = require('cloudinary');
 cloudinary.config({ 
   cloud_name: 'tycoon', 
   api_key: '167312485966359', 
-  api_secret: 'uD9LwJ61EhmLk4Y95rrXQNflIt8',
+  api_secret: 'uD9LwJ61EhmLk4Y95rrXQNflIt8'
 });
 
 //index route
@@ -98,7 +98,7 @@ router.get("/category/:category1",function(req,res){
 			   if(allAds.length < 1) {
                   noMatch = "SORRY NO ADS FOUND FOR YOUR SEARCH ):";
               }
-			      console.log(allAds);
+			     
               res.render("adPost/index",{adpost:allAds, category1:c1, noMatch: noMatch});
            }
 			});
@@ -195,7 +195,7 @@ router.get("/category//blocks/:block",function(req,res){
 	console.log(blocks);
 		   
 			Campground.find({block:blocks}, function(err, allAds){
-				console.log(allAds);
+				
            if(err){
                console.log(err);
            } else {
@@ -310,7 +310,7 @@ router.post("/request", middleware.isLoggedIn,function(req,res){
 	}
 			var category = req.body.category;
 	var category = req.body.category.slice(0,-1);
-	console.log(category);
+	
 	var reqNew = {
 		reqTitle:reqTitle, description:description, priceRange: priceRange, author: author,Phone:Phone,block:block, category:category
 	}
@@ -321,7 +321,6 @@ router.post("/request", middleware.isLoggedIn,function(req,res){
 			return res.redirect('back');
 		}else{
 			
-			console.log(newlyCreated);
 			res.redirect("/adPost/request");
 		}
 	});
@@ -397,8 +396,7 @@ router.get("/resources/:id",function(req,res,next){
 				if(err){
 					console.log(err);
 				}else{
-					console.log("qp is:")
-					console.log(qp);
+					
 					res.render("resources/quesp", {courses: foundcourse,qp:qp});
 				}
 			})
@@ -591,12 +589,9 @@ router.post("/", middleware.isLoggedIn, upload.single('img1') ,function(req, res
 	var price1 = req.body.price1;
 	var price2 = req.body.price2;
 
-console.log(ph);
 	
 	 var newAd = {adTitle:adTitle,category: category,added1:0,added2:0, ph:ph, img2:img2, img3:img3,img1: img1 ,img1Id: img1_id,description: description, author: author,room:room,block:block, price1:price1 }
-	console.log(category);
-console.log(ph);
-		console.log(newAd);
+
 	//create a new campground and save to db
 					Campground.create(newAd, function(err,newlyCreated){
 						if(err){

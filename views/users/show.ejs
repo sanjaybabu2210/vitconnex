@@ -1,6 +1,7 @@
 
 <% include ../partials/header %>
 <style>
+	
 	@media only screen and (max-width: 700px) {
 			#pic{
 				
@@ -11,6 +12,7 @@
 			}
 		#margi{
 			margin-top:-12%;
+			margin-bottom:20%;
 		}
 	}
 	@media only screen and (min-width: 1200px) {
@@ -21,16 +23,19 @@
 				
 			}
 		#margi{
+			margin-bottom:-26%;
 margin-top:-60px;}
 	}
 </style>
-<div id="margi" style="background-color:#A3E4D7;background-size:cover;background-repeat:repeat-y;  background-attachment: scroll; margin-bottom:-25%;height:680%;max-height:700%;">
 
-<div style="margin-top:7%;" class="text-center">
-	
+<div id="margi" style="background-color:#442B55;background-size:cover;background-repeat:repeat-y;  background-attachment: scroll; max-height:700%;color:#4F4954;height:400%;margin-bottom:-20%;">
 
-	<a style="margin-top:15%;" href="mailto:<%= user.username %>">Email To: <i class="fas fa-envelope"></i>  <%= user.username %></a>
-	<h3>
+<div style="margin-top:7%;margin-bottom:20%;" class="text-center">
+	<br>
+	<br>
+
+	<a style="margin-top:15%;color:#AB95BE;" href="mailto:<%= user.username %>">Email To: <i class="fas fa-envelope"></i>  <%= user.username %></a>
+	<h3 style="color:#AB95BE;">
 			<%= user.name %>'s Advertisements:
 		</h3>
 	<hr>
@@ -39,16 +44,16 @@ margin-top:-60px;}
 	
 		
 	
-		<div style="margin:0% 2% 5% 10%; margin-bottom:20%" class="row ">
+		<div style="margin:0% 2% 5% 10%; margin-bottom:20%;" class="row ">
 			<% campgrounds.forEach(function(campground) { %>
-			<div id ="pic" style="float:left;margin-left:40px; margin-bottom:10%;padding:15px 0px;max-height:300px;" class=" text-center  card col-lg-3 float-right">
+			<div id ="pic" style="float:left;margin-left:40px; margin-bottom:10%;padding:15px 0px;max-height:300px; " class=" text-center  card col-lg-3 float-right">
 				<h4 style="background:#d3d3d3" class="well well-sm "><strong><%= campground.adTitle %></strong></h4>
 			<img style="height:250px;" src="<%= campground.img1 %>">
-					<h5 style="padding-top:5px;" >
+					<h5 style="padding-top:5px;color:#AB95BE;" >
 						RS.<%= campground.price1 %>
 
 				</h5>
-				<div>
+				<div style="border: 3px solid;">
 						<a href="/adPost/<%= campground._id %>" class="btn btn-block btn-primary">VIEW AD</a>
 								 </div>
 			</div>
