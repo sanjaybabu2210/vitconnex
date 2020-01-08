@@ -15,8 +15,11 @@ var express = require("express"),
 	configAuth = require("./auth")
 //requring routescd 
 ////
-
-
+const forceSecure = require("force-secure-express");
+app.use(forceSecure([
+    "www.vitconnex.com",
+    "https://www.vitconnex.com"
+]));
 
 
 // const upload = require('./multer')

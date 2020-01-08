@@ -5,6 +5,7 @@ var User = require("../models/user");
 var Campground = require("../models/campground");
 var async = require("async");
 var nodemailer = require("nodemailer");
+const forceSecure = require("force-secure-express");
 var crypto = require("crypto");
 var exphbs = require("express-handlebars");
 var messagebird = require("messagebird")('puCDEk8mQjUVGkv4dqaz3p1lx');
@@ -15,6 +16,10 @@ router.get("/",function(req,res){
 	res.render("landing");
 	
 }); 
+router.use(forceSecure([
+    "www.vitconnex.com",
+    "https://www.vitconnex.com"
+]));
 
 
 router.get("/phone",function(req,res){
