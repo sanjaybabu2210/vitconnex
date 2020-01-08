@@ -20,6 +20,10 @@ app.use(forceSecure([
     "www.vitconnex.com",
     "https://www.vitconnex.com"
 ]));
+app.use(forceSecure([
+    "vitconnex.com",
+    "https://www.vitconnex.com"
+]));
 
 
 // const upload = require('./multer')
