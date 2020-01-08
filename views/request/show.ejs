@@ -296,7 +296,7 @@ CATEGORIES
 <a href="/adPost/category2" data-toggle="tooltip" data-placement="top" title="POST YOUR ADS">
 <i style="margin-left:-1%;margin-top:2%" class="fas fa-plus-circle fa-3x"></i>
 <p>
-POST YOUR ADS
+POST YOUR REQUEST
 </p>
 </a>
 <hr>
@@ -313,7 +313,7 @@ POST YOUR ADS
 <span class="category">Expected-range:RS.<%= adpost.priceRange %></span>
 </div>
 <div style="height:70px" class="description">
-<p><%= adpost.description %> <%= moment(adpost.createdAt).fromNow() %></p>
+<p><%= adpost.description %><br> <br><span style="float:right;"><%= moment(adpost.createdAt).fromNow() %></span></p>
 </div>
 </div>
 <div class="extra content">
