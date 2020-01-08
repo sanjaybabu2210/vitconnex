@@ -16,10 +16,10 @@ var express = require("express"),
 //requring routescd 
 ////
 const forceSecure = require("force-secure-express");
-app.use(forceSecure([
-    "www.vitconnex.com",
-    "https://www.vitconnex.com"
-]));
+// app.use(forceSecure([
+//     "www.vitconnex.com",
+//     "https://www.vitconnex.com"
+// ]));
 app.use(forceSecure([
     "vitconnex.com",
     "https://www.vitconnex.com"
