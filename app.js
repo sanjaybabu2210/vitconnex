@@ -17,6 +17,10 @@ var express = require("express"),
 ////
 const forceSecure = require("force-secure-express");
 app.use(forceSecure([
+    "vitconnex.com",
+    "www.vitconnex.com"
+]));
+app.use(forceSecure([
     "www.vitconnex.com",
     "https://www.vitconnex.com"
 ]));
