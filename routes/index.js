@@ -131,7 +131,7 @@ router.post("/register", function(req,res){
 											service: 'Gmail', 
 											auth: {
 											  user: 'vitconnex@gmail.com',
-											  pass: 'mybusiness'
+											  pass: 'viteeenext2020'
 											}
 										  });
 										  var mailOptions = {
@@ -181,7 +181,7 @@ router.post("/register", function(req,res){
         service: 'Gmail', 
         auth: {
           user: 'vitconnex@gmail.com',
-          pass: 'mybusiness'
+          pass: 'viteeenext2020'
         }
       });
       var mailOptions = {
@@ -286,7 +286,7 @@ router.post('/forgot', function(req, res, next) {
         service: 'Gmail', 
         auth: {
           user: 'vitconnex@gmail.com',
-          pass: 'mybusiness'
+          pass: 'viteeenext2020'
         }
       });
       var mailOptions = {
@@ -369,7 +369,7 @@ router.post('/reset/:token', function(req, res) {
         service: 'Gmail', 
         auth: {
           user: 'vitconnex@gmail.com',
-          pass: 'mybusiness'
+          pass: 'viteeenext2020'
         }
       });
       var mailOptions = {
