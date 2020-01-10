@@ -175,7 +175,7 @@ router.post("/register", function(req,res){
 							console.log(user);
 						passport.authenticate("local")(req, res, function(){
 							console.log(user);
-							req.flash("success","Welcome to vitblog " + user.name);
+							req.flash("success","Welcome to VITCONNEX " + user.name);
 						});
 							 var smtpTransport = nodemailer.createTransport({
         service: 'Gmail', 

@@ -178,14 +178,20 @@ VIT-EX
     </div>
     -->
 </nav>
+	<style>
+		#ror{
+			margin-bottom:-10%;
+		}
+	
+	</style>
 <div id=msg class=container>
 <% if(error && error.length > 0){ %>
-<div style=margin-top:10% class="alert alert-danger" role=alert>
+<div style="margin-top:10%" class="alert alert-danger" role=alert>
 <%= error %>
 </div>
 <% } %>
 <% if(success && success.length > 0){ %>
-<div style=margin-top:10%;margin-bottom:-10% class="alert alert-success" role=alert>
+<div id="ror" style="margin-top:10%;" class="alert alert-success" role=alert>
 <%= success %>
 </div>
 <% } %>
