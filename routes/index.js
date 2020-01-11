@@ -82,7 +82,7 @@ router.get("/register", function(req,res){
 	res.render("register",{page: 'register'});
 })
 router.get("/sitemap", function(req,res){
-	res.render("sitemap.xml");
+	res.render("sitemap");
 })
 router.get("/register/admin", function(req,res){
 	res.render("admin",{page: 'register'});
