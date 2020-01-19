@@ -879,6 +879,15 @@ router.delete("/:id",middleware.checkCampgroundOwnership, function(req,res){
 		}
 	});
 });
+router.delete("/resources/:id", function(req,res){
+	Course.findByIdAndRemove(req.params.id, function(err){
+		if(err){
+			res.redirect("/adPost");
+		}else{
+			res.redirect("/adPost");
+		}
+	});
+});
 router.post("/req/:id",middleware.checkCampgroundOwnership, function(req,res){
 	Request.findByIdAndRemove(req.params.id, function(err){
 		
