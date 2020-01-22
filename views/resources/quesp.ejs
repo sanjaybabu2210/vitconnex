@@ -7,13 +7,13 @@
 <p style="color:#FEDBD0" class="lead">Updated set of question papers which are easy to access</p>
 </div>
 <div class="card-deck mb-3 text-center">
-<div style="max-height:180px;margin-bottom:35%" class="card mb-4 shadow-sm">
-<div class="card-body" style="background-color:#53ff1a;margin-bottom:40rem;" style="border-radius:25px;">
+<div style="max-height:260px;margin-bottom:35%" class="card mb-4 shadow-sm">
+<div class="card-body" style="background-color:#53ff1a;margin-bottom:60rem;min-height:380px;" style="border-radius:25px;">
 <h1 class="card-title pricing-card-title"><%= courses.course %></h1>
 <ul class="list-unstyled mt-3 mb-4">
 <li><h4 class="my-0 font-weight-normal"><%= courses.courseCode %></h4></li>
 </ul>
-<button type="button" class="btn btn-lg btn-block btn-primary">Syllabus</button>
+<button  style="margin-bottom:200px;" type="button" class="btn btn-lg btn-block btn-primary">Syllabus</button>
 </div>
 </div>
 <div id="paper" style="margin-bottom:10%" class="card mb-8 shadow-sm">
@@ -30,7 +30,8 @@
 </li>
 </ul>
 </div>
-<div class="card-body">
+	<div style="margin-top:10%;">
+<div  class="card-body">
 <div class="tab-content" id="myTabContent">
 <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
 <% qp.forEach(function(qp1){if(qp1.type == 'cat1'){ %>
@@ -73,6 +74,7 @@
 </div>
 </div>
 </div>
+	</div>
 </div>
 </div>
 </div>
