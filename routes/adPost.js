@@ -432,7 +432,7 @@ router.post("/resources/:id/question", middleware.isLoggedIn, upload.single('ima
 		var imageId= result.secure_url;
 			
 		
-			var download = imageId.slice(0,46) + '/a_327,c_scale,l_Capture11_zpnm3a,o_44,w_829' +imageId.slice(46,80) + 'pdf';
+			var download = imageId.slice(0,46) + '/a_327,c_scale,l_Capture11_zpnm3a,o_44,w_329' +imageId.slice(46,80) + 'pdf';
 			if(imageId.slice(80,83)=='pdf')
 				{
 					imageId =  imageId.slice(0,80) + 'jpg';
