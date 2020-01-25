@@ -129,7 +129,7 @@ router.get("/privacy",function(req,res){
 
 router.get("/contest/vitconnexQuestionPaperGroup",function(req,res){
 	
-	Contest.find({}).sort({count:-1}).limit(30).exec(function(err, contestant) {
+	Contest.find({}).sort({count:-1}).limit(10).exec(function(err, contestant) {
 
 		if(err){
 			console.log(err);
