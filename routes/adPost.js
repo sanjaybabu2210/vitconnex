@@ -6,7 +6,8 @@ var Category = require("../models/category");
 var Course = require("../models/resources");
 var Question = require("../models/questionpaper");
 var Request = require("../models/request");
-
+var Contest = require("../models/contest");
+var User = require("../models/user");
 var middleware = require("../middleware/index.js");
 var size = require('window-size');
 
@@ -54,7 +55,7 @@ router.get("/", function(req, res){
     var noMatch = null;
 	var category1 = null;
 
-	// eval(require("locus"));
+
 	
     if(req.query.search) {
         const regex = new RegExp(escapeRegex(req.query.search), 'gi');
@@ -124,7 +125,24 @@ router.get("/category/:category1",function(req,res){
 });
 router.get("/privacy",function(req,res){
 	res.render("adPost/privacy");
-})
+});
+
+router.get("/contest/vitconnexQuestionPaperGroup",function(req,res){
+	
+	Contest.find({}).sort({count:-1}).limit(30).exec(function(err, contestant) {
+
+		if(err){
+			console.log(err);
+		}else{
+		
+				res.render("adPost/contest",{member:contestant});
+		}
+	});
+	
+	
+	
+
+});
 router.get("/about",function(req,res){
 	res.render("adPost/about");
 })
@@ -442,7 +460,21 @@ router.post("/resources/:id/question", middleware.isLoggedIn, upload.single('ima
 		id: req.user._id,
 		username: req.user.username
 	}
-			
+			Contest.findOne({ username: req.user.username }, function(err, user) {
+				console.log(user);
+				console.log(user.count);
+				user.count = user.count + 1;
+				user.save(function(err) {
+			if(err){
+			  req.flash('error',err);
+			}
+			console.log("user added");
+			});
+			});
+				
+				
+				
+					
 	var qpNew = {
 		courseTitle:courseTitle,type:type,image:image,imageId:imageId, author: author,download:download
 	}

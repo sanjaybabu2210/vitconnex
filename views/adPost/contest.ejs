@@ -1,0 +1,122 @@
+<% include ../partials/header %>
+<style>
+	@media only screen and (max-width:700px){
+		
+		#mm{
+		    width:200px;
+			margin-right:900px;
+			font-size:8.5px;
+			font-height:10px;
+			linespace:10px;
+		}
+	}
+
+
+
+</style>
+ <br>
+<br>
+<br>
+<div class="container text-center">
+	<h1 style="color:#490BA1">
+	<b>Question Paper Contest</b>
+	</h1>
+	<h4 style="color:#D81C44">
+		SIGN UP TO PARTICIPATE.
+	</h4>
+	<h3>
+		Get Chance to Win Cash Reward of Rs 447 (instanly on Gpay)
+	</h3>
+	<h4>
+		Dont Miss the Oppurtunity<br>
+		Only for VitConnex QuestionPaper Group
+	</h4>
+</div>
+
+
+<p class="text-center" style="font-size:40px;color:#F60D29" id="demo">
+	
+</p>
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Jan 28, 2020 14:34:25").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the result in the element with id="demo"
+  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+
+  // If the count down is finished, write some text
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
+</script>
+
+
+<% var sr = 0 %>
+<h3 class="text-center" style="color:red;text-decoration:underline;">
+	Top 30 Ranks Right Now
+</h3>
+	<div id="mm" class="bs-example container">
+    <table class="table" class="container">
+		
+        <thead class="thead-dark">
+            <tr>
+                <th>Rank</th>
+                <th>Name</th>
+          
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+			<% member.forEach(function(contestant){  %>
+		<% sr =  sr + 1 %>
+            <tr>
+                <td><%= sr %></td>
+                <td><%= contestant.name %></td>
+             
+                <td><%= contestant.username  %></td>
+            </tr>
+       
+                  
+        </tbody>
+		<% }); %>
+    </table>
+</div>
+	<div class="container ">
+	<p style="font-size:20px;">
+		<b style="color:red">Guide Lines</b><br>
+		1.The page get updated every second<b>(rank Changes)</b> from <b>8 PM</b> onwards.Be the one to be on the Top<br>
+		2.Top three members get Cash reward of <b>Rs 149 </b> in Case there are one other Competitors <b>Rs 447 </b>awarded to one person.<br>
+		3.First contestant who upload question get <b>three bonus points</b>.<br>
+		3.participants can view their status on leaderBoard any time from <b>8pm</b>.<br>
+		4.each paper gives one point.<br>
+		5.participants should check previous papers before uploading<br>
+		6.uploading of duplicate or wrong papers gives <b>negative of 2 marks</b> <br>
+		7.Contest among only one whatsapp group VitconneQuestionPaper Group.<br>
+		8.Contest is 100% transparent.<br>
+		9.Mobile number of top members will be asked soon.<br>
+		10.participants can upload image or pdf <a href="https://www.vitconnex.com/adPost/resources" style="color:blue">UploadNow</a><br>
+	</p>
+</div>
+	
+
+
+
+<% include ../partials/footer %>

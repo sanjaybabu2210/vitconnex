@@ -5,7 +5,7 @@ var User = require("../models/user");
 var Campground = require("../models/campground");
 var async = require("async");
 var nodemailer = require("nodemailer");
-
+var Contest = require("../models/contest");
 var crypto = require("crypto");
 var exphbs = require("express-handlebars");
 var messagebird = require("messagebird")('puCDEk8mQjUVGkv4dqaz3p1lx');
@@ -114,7 +114,18 @@ router.post("/register", function(req,res){
 						if(req.body.adminCode === "Tyc00n2020"){
 								newUser.isAdmin = true;
 							}
-							
+														
+var newcontest = {username:req.body.username,name:req.body.name,count:1}
+					Contest.create(newcontest, function(err,newlyCreated){
+						if(err){
+							req.flash('error', err.message);
+							return res.redirect('back');
+							console.log("bad");
+						}else{
+
+							console.log("created");
+						}
+					});
 
 					User.register(newUser, req.body.password, function(err, user){
 						if(err){
@@ -134,7 +145,7 @@ router.post("/register", function(req,res){
 											service: 'Gmail', 
 											auth: {
 											  user: 'vitconnex@gmail.com',
-											  pass: 'viteeenext2020'
+											  pass: ''
 											}
 										  });
 										  var mailOptions = {
@@ -166,7 +177,18 @@ router.post("/register", function(req,res){
 	if(req.body.adminCode === "Tyc00n2020"){
 								newUser.isAdmin = true;
 							}
-							
+														
+var newcontest = {username:req.body.username,name:req.body.name,count:1}
+					Contest.create(newcontest, function(err,newlyCreated){
+						if(err){
+							req.flash('error', err.message);
+							return res.redirect('back');
+							console.log("bad");
+						}else{
+
+							console.log("created");
+						}
+					});
 
 					User.register(newUser, req.body.password, function(err, user){
 						if(err){
@@ -184,7 +206,7 @@ router.post("/register", function(req,res){
         service: 'Gmail', 
         auth: {
           user: 'vitconnex@gmail.com',
-          pass: 'viteeenext2020'
+          pass: ''
         }
       });
       var mailOptions = {
@@ -289,7 +311,7 @@ router.post('/forgot', function(req, res, next) {
         service: 'Gmail', 
         auth: {
           user: 'vitconnex@gmail.com',
-          pass: 'viteeenext2020'
+          pass: ''
         }
       });
       var mailOptions = {
@@ -372,7 +394,7 @@ router.post('/reset/:token', function(req, res) {
         service: 'Gmail', 
         auth: {
           user: 'vitconnex@gmail.com',
-          pass: 'viteeenext2020'
+          pass: ''
         }
       });
       var mailOptions = {
