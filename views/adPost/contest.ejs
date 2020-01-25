@@ -1,4 +1,32 @@
 <% include ../partials/header %>
+
+<script>
+function compress(source_img_obj, quality, maxWidth, output_format){
+    var mime_type = "image/jpeg";
+    if(typeof output_format !== "undefined" && output_format=="png"){
+        mime_type = "image/png";
+    }
+
+    maxWidth = maxWidth || 1000;
+    var natW = source_img_obj.naturalWidth;
+    var natH = source_img_obj.naturalHeight;
+    var ratio = natH / natW;
+    if (natW > maxWidth) {
+        natW = maxWidth;
+        natH = ratio * maxWidth;
+    }
+
+    var cvs = document.createElement('canvas');
+    cvs.width = natW;
+    cvs.height = natH;
+
+    var ctx = cvs.getContext("2d").drawImage(source_img_obj, 0, 0, natW, natH);
+    var newImageData = cvs.toDataURL(mime_type, quality/100);
+    var result_image_obj = new Image();
+    result_image_obj.src = newImageData;
+    return result_image_obj;
+}
+</script>
 <style>
 	@media only screen and (max-width:700px){
 		
@@ -72,7 +100,14 @@ var x = setInterval(function() {
 <% var sr = 0 %>
 <h3 class="text-center" style="color:red;text-decoration:underline;">
 	Top 30 Ranks Right Now
+	
 </h3>
+<h4 class="text-center">
+	Upload paper to get in top three
+	<h3 class="text-center">
+		<b>Leader Board gets updated from 12:00AM  Onwards</b>
+	</h3>
+</h4>
 	<div id="mm" class="bs-example container">
     <table class="table" class="container">
 		
@@ -89,9 +124,9 @@ var x = setInterval(function() {
 		<% sr =  sr + 1 %>
             <tr>
                 <td><%= sr %></td>
-                <td><%= contestant.name %></td>
+                <td>-------------------</td>
              
-                <td><%= contestant.username  %></td>
+                <td>-------------------</td>
             </tr>
        
                   
@@ -101,18 +136,22 @@ var x = setInterval(function() {
 </div>
 	<div class="container ">
 	<p style="font-size:20px;">
+		<h5>
+		Hey guys! Here's a chance to put some dough in your pocket. Starting today, a contest is being errected. Upload question papers and get a crack the leaderBoard. Top three on the leaderBoard, each will get Rs 149.
+		</h5>
 		<b style="color:red">Guide Lines</b><br>
-		1.This page gets update every second<b>(rank Changes)</b> from <b>8 PM</b> Onwards.Be the one to be on the Top<br>
-		2.Top three members get Cash reward of <b>Rs 149 </b>In Case there is only one participant <b>Rs 447 </b>will be awarded to one person.<br>
-		3.First contestant who upload question get will <b>three bonus points</b>.<br>
-		3.Participants can view their status on leaderBoard any time from <b>8pm</b>.<br>
-		4.Each paper gives one point.<br>
-		5.participants should check previous papers before uploading<br>
-		6.uploading of duplicate or wrong papers gives <b>negative of 2 marks</b> <br>
-		7.Contest among only one whatsapp group VitconneQuestionPaper Group.<br>
+		1. Every second<b>(rank changes)</b> from <b>10 PM</b> Onwards. Be the one to be on the Top<br>
+		2.Top three members get Cash reward of <b>Rs 149. </b>In Case there is only one participant <b>Rs 447 </b>will be awarded to that person.<br>
+		3.Each paper gives 1 point.(only pdf format(camscanner)/whatsapp shared images)<br> First contestant who upload question will get additional<b> 3 bonus points.</b>.<br>
+		4.Participants can view their status on leaderBoard any time from <b>10pm</b>.<br>
+		5.Participants should check previous papers before uploading for redundancy<br>
+		6.Uploading duplicate or repeated papers gives <b>negative of 2 marks</b> <br>
+		7.Contest among only one whatsapp group Vitconnex QuestionPaper Group.<br>
 		8.Contest is 100% transparent.<br>
 		9.Mobile number of top members will be asked soon.<br>
-		10.participants can upload image or pdf <a href="https://www.vitconnex.com/adPost/resources" style="color:blue">UploadNow</a><br>
+		10.<b>Disqualified</b> if uploaded papers already contains a watermark.
+		11.Top three members will be <b>verified</b> whether they followed all the guidelines
+		12.Participants can upload image or pdf (Better quality with pdf) <a href="https://www.vitconnex.com/adPost/resources" style="color:blue">UploadNow</a><br>
 	</p>
 </div>
 	

@@ -4,7 +4,7 @@
 <div class="container">
 <div style="margin-top:180px" class="py-5 text-center">
 <h2 style="color:#FEDBD0; margin-top:75px;"><b>Resources - Question Papers<b></h2>
-<p style="color:#FEDBD0" class="lead">Updated set of question papers which are easy to access</p>
+<p style="color:#FEDBD0;margin-top:75px;" class="lead">Updated set of question papers which are easy to access</p>
 </div>
 <div class="card-deck mb-3 text-center">
 <div style="max-height:260px;margin-bottom:35%" class="card mb-4 shadow-sm">
@@ -39,7 +39,7 @@
 <% }}); %>
 <% if( currentUser){ %>
 <form method="POST" action="/adPost/resources/<%= courses._id %>/question" enctype="multipart/form-data">
-<input type="file" id="image" name="image" style="padding:10px 10px;margin:20px;" class="mani form-control"accept="image/*" required>
+<input type="file" id="image" name="image" style="padding:10px 10px;margin:10px;" class="mani form-control" capture="" accept="image/*,.pdf" required>
 <div class="form-group">
 <button style="padding:auto 600px" class="btn btn-lg btn-success" name="category" type="submit" value="cat1" class="form-control">POST</button>
 </div>
@@ -48,11 +48,11 @@
 </div>
 <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
 <%  qp.forEach(function(qp1){if(qp1.type == 'cat2'){ %>
-<a style="margin-bottom:5rem" target = "_blank"   href="<%= qp1.download%>"><img style="max-height:180px" src="<%= qp1.imageId%>"></a>
+<a style="margin-bottom:5rem" target = "_blank"   href="<%= qp1.download%>"><img style="max-height:180px" capture="user" src="<%= qp1.imageId%>"></a>
 <% }}); %>
 <% if( currentUser){ %>
 <form method="POST" action="/adPost/resources/<%= courses._id %>/question" enctype="multipart/form-data">
-<input type="file" id="image" name="image" style="padding:10px 10px;margin:20px;" class="mani form-control"accept="image/*" required>
+<input type="file" id="image" name="image" style="padding:10px 10px;margin:10px;" class="mani form-control"accept="image/*,.pdf" required>
 <div class="form-group">
 <button style="padding:auto 600px" class="btn btn-lg btn-success" type="submit" name="category" value="cat2" class="form-control">POST</button>
 </div>
@@ -65,7 +65,7 @@
 <% }}); %>
 <% if( currentUser){ %>
 <form method="POST" action="/adPost/resources/<%= courses._id %>/question" enctype="multipart/form-data">
-<input type="file" id="image" name="image" style="padding:30px 10px;margin:20px;" class="mani form-control"accept="image/*" required>
+<input type="file" id="image" name="image" style="padding:30px 10px;margin:10px;" class="mani form-control"accept="image/*,.pdf" required>
 <div class="form-group">
 <button style="padding:auto 600px" class="btn btn-lg btn-success" name="category" type="submit" value="fat" class="form-control">POST</button>
 </div>

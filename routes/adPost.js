@@ -450,7 +450,7 @@ router.post("/resources/:id/question", middleware.isLoggedIn, upload.single('ima
 		var imageId= result.secure_url;
 			
 		
-			var download = imageId.slice(0,46) + '/a_0,c_scale,l_Capture_dv838b,o_10,w_366,y_240' +imageId.slice(46,80) + 'pdf';
+			var download = imageId.slice(0,46) + '/a_0,c_scale,l_Capture_dv838b,o_7,w_706,y_280' +imageId.slice(46,80) + 'pdf';
 			if(imageId.slice(80,83)=='pdf')
 				{
 					imageId =  imageId.slice(0,80) + 'jpg';
@@ -708,36 +708,6 @@ router.get("/resources", function(req, res){
 	});
 
 });
-// router.get("/resources/:id",function(req,res){
-// 	//find the campground with provided id and show
-// 	Course.findById(req.params.id).populate("comments").exec(function(err, foundcourse){
-// 		if(err){
-// 			console.log(err);
-// 		}
-// 		else{
-// 			 res.render("resources/quesp", {courses: foundcourse});
-			
-// 		}
-
-// });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //show route
 router.get("/:id",function(req,res){
 	//find the campground with provided id and show
