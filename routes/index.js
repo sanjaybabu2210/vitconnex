@@ -16,65 +16,39 @@ router.get("/",function(req,res){
 	res.render("landing");
 	
 }); 
-
-
-
-router.get("/phone",function(req,res){
-	res.render("adPost/ph_new")
-	const messagebird = require('messagebird')('puCDEk8mQjUVGkv4dqaz3p1lx');
-
-const params = {
-  'originator': '+919943677316',
-  'recipients': [
-    '+919943677316'
-  ],
-    'body': 'MESSAGE'
-  };
-
-  messagebird.messages.create(params, function (err, response) {
-    if (err) {
-      return console.log(err);
-    }
-    console.log(response);
-  });
-	
+router.get("/privacy",function(req,res){
+	res.render("adPost/privacy");
 });
-router.post("/step2",function(req,res){
-	var number = req.body.number;
-	messagebird.verify.create(number,{
-		template: "Your verification code is %token."
-		
-	}, function(err, response){
+
+router.get("/contest/vitconnexQuestionPaperGroup",function(req,res){
+	
+	Contest.find({}).sort({count:-1}).limit(10).exec(function(err, contestant) {
+
 		if(err){
 			console.log(err);
-			res.render('adPost/ph_new',{
-				error: err.errors[0].description
-				
-			});
 		}else{
-			console.log(response);
-			res.render('adPost/step2'),{
-				id : response.id
-			}
+		
+				res.render("adPost/contest",{member:contestant});
 		}
-	})
-})
-router.post("/step3",function(req,res){
-	var id = req.body.id;
-	var token = req.body.token;
+	});
 	
-	messagebird.verify.verify(id, token, function(err, response){
-		if(err){
-			res.render('adPost/step2',{
-				error: err.errors[0].description,
-				id : id
-			});
-		}else{
-			res.send('succesfully registered');
-		}
-	})
 	
+	
+
+});
+router.get("/about",function(req,res){
+	res.render("adPost/about");
 })
+router.get("/contact",function(req,res){
+	res.render("adPost/contact");
+})
+router.get("/faq",function(req,res){
+	res.render("adPost/faq");
+})
+
+
+
+
 //===============
 //AUTH ROUTES
 //============

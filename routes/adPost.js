@@ -123,42 +123,6 @@ router.get("/category/:category1",function(req,res){
 		   });
 			 }
 });
-router.get("/privacy",function(req,res){
-	res.render("adPost/privacy");
-});
-
-router.get("/contest/vitconnexQuestionPaperGroup",function(req,res){
-	
-	Contest.find({}).sort({count:-1}).limit(10).exec(function(err, contestant) {
-
-		if(err){
-			console.log(err);
-		}else{
-		
-				res.render("adPost/contest",{member:contestant});
-		}
-	});
-	
-	
-	
-
-});
-router.get("/about",function(req,res){
-	res.render("adPost/about");
-})
-router.get("/contact",function(req,res){
-	res.render("adPost/contact");
-})
-router.get("/faq",function(req,res){
-	res.render("adPost/faq");
-})
-router.get("/category/new",function(req,res){
-
-	res.render("adPost/new");
-	
-});
-
-
 
 
 router.get("/category/:category/request",function(req,res){
@@ -645,7 +609,11 @@ router.get("/new", middleware.isLoggedIn, function(req,res){
 	res.render("adPost/new");
 });
 
+router.get("/category/new",function(req,res){
 
+	res.render("adPost/new");
+	
+});
 
 router.get("/resources", function(req, res){
     var noMatch = null;
