@@ -5,7 +5,7 @@ var express = require("express"),
 	Comment = require("./models/comment"),
 	Campground = require("./models/campground"),
 	Share = require("./models/share"),
-	seedDB = require("./seed"),
+
 	passport = require("passport"),
 	flash = require("connect-flash"),
 	LocalStrategy = require("passport-local"),
