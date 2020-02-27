@@ -424,17 +424,7 @@ router.post("/resources/:id/question", middleware.isLoggedIn, upload.single('ima
 		id: req.user._id,
 		username: req.user.username
 	}
-			Contest.findOne({ username: req.user.username }, function(err, user) {
-				console.log(user);
-				console.log(user.count);
-				user.count = user.count + 1;
-				user.save(function(err) {
-			if(err){
-			  req.flash('error',err);
-			}
-			console.log("user added");
-			});
-			});
+			
 				
 				
 				
