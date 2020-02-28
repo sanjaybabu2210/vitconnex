@@ -25,7 +25,6 @@ app.use(forceSecure([
 
 // const upload = require('./multer')
 // const cloudinary = require('./cloudinary')
-// const fs = require('fs');
 
 // app.use(bodyParser.urlencoded({
 //   extended: false
