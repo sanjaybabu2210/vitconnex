@@ -439,7 +439,7 @@ router.post("/resources/:id/question", middleware.isLoggedIn, upload.single('ima
 			return res.redirect('back');
 		}else{
 			
-			res.redirect("/adPost/:id/question");
+			res.redirect("/adPost/resources/:id/question");
 		}
 	});
 		}
