@@ -16,6 +16,9 @@ router.get("/",function(req,res){
 	res.render("landing");
 	
 }); 
+router.get("/hostels",function(req,res){
+	res.render("hostel");
+});
 router.get("/privacy",function(req,res){
 	res.render("adPost/privacy");
 });

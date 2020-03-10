@@ -1,0 +1,1439 @@
+
+
+
+<head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+       <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+       <link href="https://fonts.googleapis.com/css?family=Cinzel|Lilita+One&display=swap" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+        <script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.min.css">
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.jquery.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Crimson+Text|Open+Sans&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="mobile.css">
+<link rel="stylesheet" type="text/css" href="pc.css">
+</head>
+    
+        <script>
+            function random_function()
+            {
+                var a=document.getElementById("input").value;
+                var image=document.getElementById("blockimage");
+                var innertexttitle=document.getElementById("hi");
+                var innertextcontent=document.getElementById("bye");
+                if(a==="A")
+                {
+                    var arr=["2NonAC","4AC","4NonAC","6NonAC"];
+                    var image=document.getElementById("blockimage")
+                    image.innerHTML="<img src="+"images/ablock.jpg"+">"
+                    innertexttitle.innerHTML="A Block";
+                    innertextcontent.innerHTML="A Block is best for the ones who are willing to take AC rooms. Rooms here are spacious and ventilated. A Block would be the best choice for the people who have classes in MB or GDN. Since its near to the subway, it may be advantageous for the people having cycles. Nearby messes are Food park, Srr and Kamadenu. Washrooms are bad.<br><br>"
+
+                    }
+                else if(a==="B")
+                {
+                    var arr=["3AC","3NonAC","6NonAC"];
+                    image.innerHTML="<img src="+"images/bblock.jpg"+">"
+                    innertexttitle.innerHTML="B Block"
+                    innertextcontent.innerHTML="B Block is generally peaceful and you will face no disturbances, especially due to trains as the block is positioned far away from the railway lines.However, most of the rooms are smaller rooms compared to the onesfrom other blocks. The block was renovated two years ago.Facilities include TVs on every floor and a Table Tennis table on the topfloor. This block lacks a daily needs store. Washrooms are decent and are cleaned daily.PR vegetarian and special messes are available nearby.A major drawback of B block is that it is quite far from the academicbuildings.<br><br>"
+
+                }
+                
+                else if(a==="C")
+                {
+                    var arr=["2NonAC","4NonAC"];
+                    image.innerHTML="<img src="+"images/cblock.jpg"+">"
+                    innertexttitle.innerHTML="C Block"
+                    innertextcontent.innerHTML="It has 4 floors. Most of the rooms here are 2-bedded non-AC. A few 4-bedded AC and non-AC rooms are also available. Rooms are good and neat as it is a recently renovated block. They are sufficiently spacious and ventilated.A great block for those who prefer solitude.It is close to the main subway and the one near TT as well.It has two badminton courts. The washrooms are decent.There are no lifts in this block and there are only two different staircases. So keep this in mind before opting for a room in one of the top floors.This block is right next to Enzo. However, there is no mess situated nearby.<br><br>"
+                }
+                else if(a==="D")
+                {
+                    var arr=["1AC","1NonAC"];
+                    image.innerHTML="<img src="+"images/dblock.jpg"+">"
+                    innertexttitle.innerHTML="D Block"
+                    innertextcontent.innerHTML="D Block is arguably the best block if you are planning to take a single bedded room. Rooms are spacious, with fairly large cupboards and tables. If your plan is to live a peaceful hostel life then this block is perfect. On the other hand, if you just want privacy in a happening block then don't choose D as it can get quite lonesome at times. A considerable population of NRI students live here (1st floor majorly).The washrooms are generally clean. You have a lift in this 3-storied block.You must have a good CGPA (9+ preferred) if you are planning for an AC room in this block.The D Block night canteen is in the mess itself and has a wide range of food items including dosa, omlet, coffee etc.<br><br>"
+                }
+                else if(a==="DAnnex")
+                {
+                    var arr=["3AC","3NonAC","4AC","4NonAC"];
+                    image.innerHTML="<img src="+"images/dannexblock.jpg"+">"
+                    innertexttitle.innerHTML="D Annex"
+                    innertextcontent.innerHTML="Located behind D Block, this 5-floored block has 170 rooms that are either 3-bedded or 4-bedded (both AC and non-AC).D Annex is positioned at a superior location with respect to the facilities available nearby. Enzo Stores, the courier delivery centre, the health centre in G Block, the outdoor stadium and swimming pool are all not too far from the block. It is also relatively close to the main subway and the one near TT. The washrooms are generally clean and well-maintained. It has one special mess and it is one of the best in VIT by popular opinion.This block does not have a badminton court. The cupboards are not among the biggest. Being surrounded by several other buildings, the views from this block are not the best.<br><br>"
+                }
+                else if(a==="E")
+                {
+                    var arr=["2NonAC"];
+                    image.innerHTML="<img src="+"images/eblock.jpg"+">"
+                    innertexttitle.innerHTML="E Block"
+                    innertextcontent.innerHTML="E Block has the best 2-bedded rooms but has limited AC rooms. Therooms are very spacious. It is generally a very peaceful block.Try to note down the room number before you go for counselling, because you don't want a room directly opposite the sewage treatment plant. It is advisable not to take the ground floor cause of the trouble from insects. There are 3 badminton courts which are usually occupied. There is no mess inside the hostel. But it is close to the special mess in D Block, several paid messes (Foodcy, Food Mall) and other messes near K Block (Zenith). The selection of foods in the night canteen is rather limited.E Block is scheduled to be renovated during the upcoming summer vacation.<br><br>"
+                }
+                else if(a==="F")
+                {
+                    var arr=["2AC","2NonAC","4NonAC","6AC","6NonAC"];
+                    image.innerHTML="<img src="+"images/fblock.jpg"+">"
+                    innertexttitle.innerHTML="F Block"
+                    innertextcontent.innerHTML="All types of rooms except 1-bedded AC and non-AC are available in F Block. However, the rooms are not spacious. The beds are predominantly bunk beds. It can be a little suffocating at times.If you want an AC room with an average CGPA, you may have to opt for this block. However most ACs are old and need servicing.A general complaint is that one can find guys smoking in every corner of F Block. This block has only 2 lifts and lacks sufficient space for hanging washed clothes.Messes available around the block include SRR special mess, Kamadenuand PR vegetarian.<br><br>"
+                }
+                else if(a==="G")
+                {
+                    var arr=["1AC","1NonAC","4AC","4NonAC"];
+                    image.innerHTML="<img src="+"images/gblock.jpg"+">"
+                    innertexttitle.innerHTML="G Block"
+                    innertextcontent.innerHTML="G Block mainly consists of 1-bedded and 4-bedded AC and non-ACrooms. The rooms are sufficiently big and well-ventilated. The corridors are wide and spacious. This block is right next to the outdoor stadium and swimming pool. Usually toppers who opt for 4-bedded rooms prefer G Block.This block has a good number of washrooms on each floor. It has a general store for utilities and a medical clinic in addition.South Indian and north Indian messes are available in the block itself and the special mess nearest to it is in D Annex (one of the best messes in VIT).G Block was renovated not too long ago and all in all, is a good block with a great atmosphere.<br><br>"
+                }
+                 else if(a==="H")
+                {
+                    var arr=["1AC","1NonAC","3NonAC"];
+                    image.innerHTML="<img src="+"images/hblock.jpg"+">"
+                    innertexttitle.innerHTML="H Block"
+                    innertextcontent.innerHTML="This block was renovated in the recent past and the rooms in H Block are generally neat. It is advisable not to take rooms near the dormitory as the washrooms can get crowded in the mornings. The washrooms are decent and are cleaned every day. There are no badminton courts in this block. However, tennis, basketball, and volleyball courts are available right in front of the block. The block has Ramachandra special mess and north Indian mess. You may also choose Food Park which is in J Block. The ground floor accommodates a canteen. Laundry services are offered on Mondays and Thursdays. Washing machines are also available. If you have classes in MB/GDN/CDMM/SMV, taking a room in H Block may prove to be advantageous. The population in H Block is small when compared to that in L Block and K Block; you can have a peaceful hostel life here..<br><br>"
+                }
+                 else if(a==="J")
+                {
+                    var arr=["1AC","1NonAC","3NonAC"];
+                    image.innerHTML="<img src="+"images/jblock.jpg"+">"
+                    innertexttitle.innerHTML="J Block"
+                    
+                    innertextcontent.innerHTML="Positioned right next to H Block, J Block is the ‘sister block’ of H Block, both in terms of architecture and facilities. Rooms are sufficiently big and generally clean. Again, it is advisable not to take rooms near the dormitory. The washrooms are decent and are cleaned every day. The block has Special and North Indian messes; you may also choose Food Park which is in J Block itself. Night canteen is good. Washrooms are cleaned regularly. Indian style toilets are not available in this block. Washing machines are available but are frequently out of service. If you have classes in MB/GDN/CDMM/SMV, taking a room in H Block may prove to be advantageous. The population in J block is small when compared to that in L Block and K Block; you can have a peaceful hostel life here. <br><br>"
+                }
+                 else if(a==="K")
+                {
+                    var arr=["4AC","6AC"];
+                    image.innerHTML="<img src="+"images/kblock.jpg"+">"
+                    innertexttitle.innerHTML="K Block"
+                    innertextcontent.innerHTML="Most of the rooms in K Block are 6-bedded AC and non-AC type. The major advantages of choosing K Block are spacious rooms, close proximity to a wide range of messes and good ventilation (the rooms are framed around two different central open areas). There is one badminton court which is invariably occupied. A general store is available on the ground floor. The messes available around K Block include Food Park, Foodcy, Zenith (special, north and south), SRRC (special, north and south). The night canteen is decent. Washing machines are available here and laundry services are offered on Mondays and Thursdays. Some of the issues with K Block include the unavoidable waiting time for lifts if your room is in one of the top floors (K Block has 10 floors) and the lengthy distance to MB and nearby buildings. Inhabitants of the ground floor have complained about the occasional odour from the sewage treatment plant located nearby.<br><br>"
+                }
+                 else if(a==="L")
+                {
+                    var arr=["1AC","2AC","4AC","6AC"];
+                    image.innerHTML="<img src="+"images/lblock.jpg"+">"
+                    innertexttitle.innerHTML="L Block"
+                    innertextcontent.innerHTML="Some of the advantages of opting for L Block include spacious rooms, good ventilation (especially on the top floors), good lighting and close proximity to a wide range of messes. L Block is not a particularly quiet block. However, the disturbances are not unnerving either.It is advisable to take rooms above the third floor because of the disturbances created due to the messes on the lower floors. Washrooms are clean and well maintained. The messes available around L Block include SRRC (one of the best in VIT), Food Park, Foodcy and Zenith. The night canteen is decent. Some of the disadvantages with L Block include the unavoidable waiting time for lifts if your room is in one of the top floors (L Block has 10 floors) and the lengthy distance to MB and nearby buildings .<br><br>"
+                }
+                else if(a==="Q")
+                {
+                    var arr=["2AC","3AC","4AC","6AC"];
+                    image.innerHTML="<img src="+"images/qblock.jpg"+">"
+                    innertexttitle.innerHTML="Q Block"
+                    innertextcontent.innerHTML="It is the newest addition to the men’s hostel blocks and therefore is flawless in terms of cleanliness. Q Block has 2,3,4 and 6- bedded AC rooms (Centralized AC). The rooms are sufficiently big. Fingerprint based turnstiles have been installed at the entrances and therefore it would be difficult for anyone other than block residents to be provided entry into the block. A general store is available in the ground floor. Badminton courts are still under construction. It has a paid mess, a veg mess and a brand new special mess. The messes are good in Q Block. Parts of the block are still under construction. For this reason, noise and dust may be problems in certain regions of the block. Until the subway near SJT becomes functional, Q Block will be the farthest hostel block from the academic buildings..<br><br>"
+                }
+             
+                var string="";
+             
+                for(i=0;i<arr.length;i++)
+                {
+                    string=string+"<option value="+arr[i]+">"+arr[i]+"</option>";
+                }
+                document.getElementById("output").innerHTML=string;
+            }
+            function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+           
+
+
+        </script>
+        <style type="text/css">
+          
+  
+
+
+  body{
+    background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+  }
+
+            
+            #input{
+                width: 120px;
+            }
+            #output{
+                width: 120px;
+            }
+            #gpainput{
+                width: 130px;
+            }
+            #submitbutton{
+                width: 70px;
+            }
+            .wait{
+                display: inline-block;
+            }
+           
+            #alli{
+                margin-top : 60px;
+                margin-left: 100px;
+                height: 400px;
+                
+
+            }
+            #hi{
+                color: white;
+            }
+            
+
+form{
+    padding-top: 10px;
+
+
+
+}
+#moi{
+    width: 720px;
+}
+#textcontent{
+    padding-right: 5px;
+}
+#drr{
+    margin-left: 800px;
+}
+.card-title{
+    margin-left: 60px;
+}
+.dropdown{
+    margin-left: 550px;
+    
+}
+.guru{
+margin-top: 10px;
+}
+#topmain{
+    margin-top: 50px;
+    width: 1349px;
+    height: 100px;
+}
+img{
+    float: left;
+    width: 620px;
+    height: 400px;
+	border-radius:15%;
+    margin-right: 20px;
+}
+
+#blockimage{
+    margin-left: 220px;
+
+    font-family: 'Crimson Text', serif;
+    font-size: large;
+    font-weight: 30;
+    font-weight: bold;
+}
+.card-text-design{
+    padding-left: 75px;
+    font-size: 40px;
+}
+.card-text-designe{
+    padding-left: 60px;
+    font-size: 40px;
+}
+.container{
+    width: 1349px;
+    padding-left: 120px;
+}
+
+
+    .oneline{
+        margin: 20px;
+    }
+    
+    img{
+        width: 500px;
+        height: 300px;
+    }
+    #topmain{
+        width: 700px;
+        
+
+    }
+
+    #input{
+                width: 140px;
+            }
+            #output{
+                width: 140px;
+            }
+            #gpainput{
+                width: 140px;
+            }
+            #submitbutton{
+                width: 140px;
+            }
+#topinfo{
+    font-family: 'Cinzel', serif;
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 40px;
+    text-align: center;
+    margin-left: 90px;
+    color: white;
+    background-color: #1C2331;
+}
+#bye{
+	margin-bottom:1.2%;
+	margin-left:36%;
+	width:50%;
+    background-color: #1C2331;
+    color: white;
+
+}
+
+  
+  
+  
+@media (min-width: 320px) and (max-width: 480px) {
+   
+
+  
+  .container{
+    width: 100%;
+    padding-left: 30px;
+    margin-left: 10;
+  }
+  form{
+    display: block;
+    margin-left: 50px;
+    width: 100%;
+  }
+  img{background-color: white;
+    color:black;
+    border: 1px solid;
+  padding: 10px;
+  box-shadow: 5px 10px;
+  border-radius: 25px;
+                margin-top: 10px;
+                width: 400px;
+                height:300px;
+                margin-bottom: 10;
+            }
+  #blockinfo{
+    padding-top: 30px;
+    width:320px;
+    padding-right: 80px;
+    align-content: stretch;
+  }
+  
+.d-flex {
+    display: block!important;
+}
+
+   #branchselect{
+                width: 500px;
+                display: block;
+            }
+            #yearselect{
+                width: 500px;
+
+            }
+            #gpainput{
+                width: 500px;
+            }
+            #submitbutton{
+                width: 100px;
+                margin-left: 200px;
+            }
+            
+            #textcontent{
+                margin-top: 200px;
+                width: 100%;
+                margin-right: 100px;
+
+            }
+             #input{
+                width: 500px;
+            }
+            #output{
+                width: 500px;
+            }
+            #bye{
+                width: 300;
+                margin-top: 350px;
+                margin-left: 55;
+                font-size: 20px;
+            }
+            #hi{
+                margin-left: 150px;
+                margin-top: 100px;
+
+            }
+            .card-text-design {
+				
+	
+    padding-left: 10;
+    font-size: 40px;
+}
+
+#alli{
+    margin-left: 110px;
+}
+      #drr{
+        margin-right: 40px;
+
+      }   
+      .card-text{
+        width: 200px;
+        height: 120px;
+        text-align: center;
+
+      }
+      .card {
+        
+        width: 220px;
+        height: 138px;
+      }  
+      .card-body{
+        width: 220px;
+        height: 138px;
+        padding: 11;
+      }
+      h5{
+    height: 10px;
+    width: 100px;
+
+}
+.card-title{
+    margin-left: 46px;
+}
+#drr{
+        margin-left: 95;
+    margin-top: 60px;
+}
+body{
+    background-image: url("https://www.elsetge.cat/myimg/f/157-1571700_best-hd-wallpaper-websites-abstract-blue-and-pink.jpg");
+	
+}
+
+#topinfo{
+    margin-left: 50px;
+    width: 600;
+    background-color: white;
+    color:black;
+    border: 1px solid;
+  padding: 10px;
+  box-shadow: 5px 10px;
+  border-radius: 25px;
+}
+form{
+     background-color: white;
+    color:black;
+    border: 1px solid;
+  padding: 10px;
+  box-shadow: 5px 10px;
+  border-radius: 25px;
+}
+#bye{
+    background-color: white;
+    color:black;
+    border: 1px solid;
+  padding: 10px;
+  box-shadow: 5px 10px;
+  border-radius: 25px;
+}
+p{
+    margin-top: 1px;
+}
+}
+
+        </style>
+        <script type="text/javascript" src="calculate.js"></script>
+    </head>
+    <body>
+        <div style="margin-top:4.8%;" class="container" id="topinfo">VIT MH ROOM PREDICTOR 2020 <br>(Based on previous year stats)</div>
+
+        
+<div id="topmain" >
+    
+   
+        <form class="container d-flex justify-content-around" onsubmit="return calculate()" >
+        <div class="oneline">
+
+
+         <select class="chosen" id="branchselect">
+            <option>Select Branch</option>
+            <option>Btech</option>
+            <option>M.Sc(Integrated)</option>
+            <option>MCA</option>
+            <option>B.Sc(Agri)</option>
+            <option>B.Sc</option>
+            <option>B.Des</option>
+            <option>B.Com</option>
+            <option>BCA</option>
+            <option>BBA</option>
+            <option>MIS</option>
+            <option>B.Arch</option>
+            
+
+
+        </select>
+    </div>
+    <div class="oneline">
+
+
+         <select class="chosen" id="yearselect">
+            <option>Select Year</option>
+            <option>1st</option>
+            <option>2nd</option>
+            <option>3rd</option>
+            
+         
+        </select>
+    </div>
+    <div class="oneline">
+   
+        <select id="input" class="chosen" onchange="random_function()">
+            <option>Select Block</option>
+            <option>A</option>
+            <option >B</option>
+            <option>C</option>
+            <option >D</option>
+            <option >DAnnex</option>
+            <option >E</option>
+            <option >F</option>
+            <option >G</option>
+            <option >H</option>
+            <option >J</option>
+            <option >K</option>
+            <option >L</option>
+            <option>Q</option>
+
+        </select>
+    </div>
+    <div class="oneline">
+        <select id="output" ></select>
+    </div>
+    <div class="oneline">
+        <input id="gpainput" type="number" step="0.01" min="0" max="10" placeholder="Enter your GPA">
+
+
+    </div>
+    
+    <div class="oneline">
+        <button class="btn btn-primary btn-sm" id="submitbutton" type="button" onclick="calculate()">Submit</button>
+    </div>
+</div>
+       
+       
+       <div id="blockinfo" class="yui">
+        <div id="alli">
+            <span id="blockimage">
+  
+</span>
+  <div id="curry">
+    <div id="textcontent">
+    <h5 id="hi"><br></h5>
+    <p  id="bye"></p>
+</div>
+</div>
+<div id="drr"><div class="card bg-light mb-3" style="max-width: 18rem;">
+  
+  <div class="card-body" id="karre">
+
+    <h5 class="card-title">Probability</h5>
+    <p class="card-text" id="barre">Click submit after you finish selecting your branch, required block, type of room and your gpa.  </p>
+  </div></div>
+</div>
+</div>
+
+</div>
+</div>
+</form>
+
+
+   
+
+
+    </body>
+   <script type="text/javascript">
+function calculate() {
+	var a=document.getElementById('branchselect').value
+	var b=document.getElementById('yearselect').value
+	var c=document.getElementById('input').value
+	var d=document.getElementById('output').value
+	var e=document.getElementById('gpainput').value
+	
+
+	if ((a=="Btech"&&b=="1st")||(a=="B.Arch"&&b=="1st")||(a=="B.Sc(Agri)"&&b=="1st")||(a=="B.Des"&&b=="1st")||(a=="MIS"&&b=="1st")||(a=="M.Sc(Integrated)"&&b=="1st")){
+
+if (c=="A") {
+	var f=["2NonAC","4AC","4NonAC","6NonAC"];
+	if (d==f[0]) {
+		var point= 8.3;
+
+	}
+	else if (d==f[1]) {
+		var point= 9.2;
+		
+	}
+	else if (d==f[2]) {
+		var point= 8.7;
+		
+	}
+	else if (d==f[3]) {
+		var point= 8.8;
+		
+	}
+	
+}
+
+
+else if (c=="B") {
+	var f=["3AC","3NonAC","6NonAC"];
+	if (d==f[0]) {
+		var point= 8.4;
+
+	}
+	else if (d==f[1]) {
+		var point= 8;
+		
+	}
+	else if (d==f[2]) {
+		var point= 8;
+		
+	}
+	
+	
+}
+
+
+else if (c=="C") {
+	var f=["2NonAC","4NonAC"];
+	if (d==f[0]) {
+		var point= 8.2;
+
+	}
+	else if (d==f[1]) {
+		var point= 8.3;
+		
+	}
+	
+	
+}
+
+
+else if (c=="D") {
+	var f=["1AC","1NonAC"];
+	if (d==f[0]) {
+		var point= 8.4;
+
+	}
+	else if (d==f[1]) {
+		var point= 8;
+		
+	}
+	
+	
+}
+
+else if (c=="DAnnex") {
+	var f=["3AC","3NonAC","4AC","4NonAC"];
+	if (d==f[0]) {
+		var point= 9.3;
+
+	}
+	else if (d==f[1]) {
+		var point= 9.3;
+		
+	}
+	else if (d==f[2]) {
+		var point= 9.4;
+		
+	}
+	else if (d==f[3]) {
+		var point= 9.3;
+		
+	}
+	
+}
+
+else if (c=="E") {
+	var f=["2NonAC"];
+	if (d==f[0]) {
+		var point= 8.5;
+
+	}
+	
+	
+}
+
+else if (c=="F") {
+	var f=["2AC","2NonAC","4NonAC","6AC","6NonAC"];
+	if (d==f[0]) {
+		var point= 7.8;
+
+	}
+	else if (d==f[1]) {
+		var point= 7;
+		
+	}
+	else if (d==f[2]) {
+		var point= 8.1;
+		
+	}
+	else if (d==f[3]) {
+		var point= 8.2;
+		
+	}
+	else if (d==f[4]) {
+		var point= 6.8;
+		
+	}
+	
+}
+
+
+else if (c=="G") {
+	var f=["1AC","1NonAC","4AC","4NonAC"];
+	if (d==f[0]) {
+		var point= 7.6;
+
+	}
+	else if (d==f[1]) {
+		var point= 6.4;
+		
+	}
+	else if (d==f[2]) {
+		var point= 9.1;
+		
+	}
+	else if (d==f[3]) {
+		var point= 8.2;
+		
+	}
+	
+	
+}
+
+else if (c=="H") {
+	var f=["1AC","1NonAC","3NonAC"];
+	if (d==f[0]) {
+		var point= 6.6;
+
+	}
+	else if (d==f[1]) {
+		var point= 6.4;
+		
+	}
+	else if (d==f[2]) {
+		var point= 8.2;
+		
+	}
+	
+	
+	
+}
+
+else if (c=="J") {
+	var f=["1AC","1NonAC","3NonAC"];
+	if (d==f[0]) {
+		var point= 7.2;
+
+	}
+	else if (d==f[1]) {
+		var point= 7;
+		
+	}
+	else if (d==f[2]) {
+		var point= 8.4;
+		
+	}
+	
+	
+	
+}
+
+
+else if (c=="K") {
+	var f=["4AC","6AC"];
+	if (d==f[0]) {
+		var point= 9.6;
+
+	}
+	else if (d==f[1]) {
+		var point= 8.7;
+		
+	}
+	
+	
+	
+	
+}
+
+else if (c=="L") {
+	var f=["1AC","2AC","3AC","4AC","6AC"];
+	if (d==f[0]) {
+		var point= 8.2;
+
+	}
+	else if (d==f[1]) {
+		var point= 8.5;
+		
+	}
+	else if (d==f[2]) {
+		var point= 9;
+		
+	}
+	else if (d==f[3]) {
+		var point= 9.5;
+		
+	}
+	else if (d==f[4]) {
+		var point= 8.95;
+		
+	}
+	
+	
+	
+}
+
+
+else if (c=="Q") {
+	var f=["2AC","3AC","4AC","6AC"];
+	if (d==f[0]) {
+		var point= 8.4;
+
+	}
+	else if (d==f[1]) {
+		var point= 8.8;
+		
+	}
+	else if (d==f[2]) {
+		var point= 8.7;
+		
+	}
+	else if (d==f[3]) {
+		var point= 8.9;
+		
+	}
+	
+	
+	
+}
+
+
+
+
+}
+else if((a=="Btech"&&b=="2nd")||(a=="B.Arch"&&b=="2nd")||(a=="B.Sc(Agri)"&&b=="2nd")||(a=="B.Des"&&b=="2nd")||(a=="MIS"&&b=="2nd")||(a=="M.Sc(Integrated)"&&b=="2nd")||(a=="BCA"&&b=="1st")||(a=="BBA"&&b=="1st")||(a=="B.Sc"&&b=="1st")||(a=="B.Com"&&b=="1st")){
+
+
+if (c=="A") {
+	var f=["2NonAC","4AC","4NonAC","6NonAC"];
+	if (d==f[0]) {
+		var point= 8.7;
+
+	}
+	else if (d==f[1]) {
+		var point= 9.2;
+		
+	}
+	else if (d==f[2]) {
+		var point= 8.9;
+		
+	}
+	else if (d==f[3]) {
+		var point= 8.8;
+		
+	}
+	
+}
+
+
+else if (c=="B") {
+	var f=["3AC","3NonAC","2NonAC","6NonAC"];
+	if (d==f[0]) {
+		var point= 8.9;
+
+	}
+	else if (d==f[1]) {
+		var point= 8;
+		
+	}
+	else if (d==f[2]) {
+		var point= 8.7;
+		
+	}
+	else if (d==f[3]) {
+		var point= 8;
+		
+	}
+	
+	
+}
+
+
+else if (c=="C") {
+	var f=["2NonAC","4NonAC"];
+	if (d==f[0]) {
+		var point= 8.5;
+
+	}
+	else if (d==f[1]) {
+		var point= 8.2;
+		
+	}
+	
+	
+}
+
+
+else if (c=="D") {
+	var f=["1AC","1NonAC"];
+	if (d==f[0]) {
+		var point= 8.9;
+
+	}
+	else if (d==f[1]) {
+		var point= 8.8;
+		
+	}
+	
+	
+}
+
+else if (c=="DAnnex") {
+	var f=["3AC","3NonAC","4AC","4NonAC"];
+	if (d==f[0]) {
+		var point= 9;
+
+	}
+	else if (d==f[1]) {
+		var point= 9.4;
+		
+	}
+	else if (d==f[2]) {
+		var point= 9.4;
+		
+	}
+	else if (d==f[3]) {
+		var point= 9.2;
+		
+	}
+	
+}
+
+else if (c=="E") {
+	var f=["2NonAC"];
+	if (d==f[0]) {
+		var point= 8.5;
+
+	}
+	
+	
+}
+
+else if (c=="F") {
+	var f=["2AC","2NonAC","4NonAC","6AC","6NonAC"];
+	if (d==f[0]) {
+		var point= 8.6;
+
+	}
+	else if (d==f[1]) {
+		var point= 8.2;
+		
+	}
+	else if (d==f[2]) {
+		var point= 7.5;
+		
+	}
+	else if (d==f[3]) {
+		var point= 8.4;
+		
+	}
+	else if (d==f[4]) {
+		var point= 7;
+		
+	}
+	
+}
+
+
+else if (c=="G") {
+	var f=["1AC","1NonAC","4AC","4NonAC"];
+	if (d==f[0]) {
+		var point= 7.2;
+
+	}
+	else if (d==f[1]) {
+		var point= 6.6;
+		
+	}
+	else if (d==f[2]) {
+		var point= 9;
+		
+	}
+	else if (d==f[3]) {
+		var point= 8.4;
+		
+	}
+	
+	
+}
+
+else if (c=="H") {
+	var f=["1AC","1NonAC","3NonAC"];
+	if (d==f[0]) {
+		var point= 7;
+
+	}
+	else if (d==f[1]) {
+		var point= 6.7;
+		
+	}
+	else if (d==f[2]) {
+		var point= 8;
+		
+	}
+	
+	
+	
+}
+
+else if (c=="J") {
+	var f=["1AC","1NonAC","3NonAC"];
+	if (d==f[0]) {
+		var point= 7.1;
+
+	}
+	else if (d==f[1]) {
+		var point= 6.5;
+		
+	}
+	else if (d==f[2]) {
+		var point= 8.2;
+		
+	}
+	
+	
+	
+}
+
+
+else if (c=="K") {
+	var f=["4AC","6AC"];
+	if (d==f[0]) {
+		var point= 9.5;
+
+	}
+	else if (d==f[1]) {
+		var point= 8.9;
+		
+	}
+	
+	
+	
+	
+}
+
+else if (c=="L") {
+	var f=["1AC","2AC","3AC","4AC","6AC"];
+	if (d==f[0]) {
+		var point= 8.8;
+
+	}
+	else if (d==f[1]) {
+		var point= 8.7;
+		
+	}
+	else if (d==f[2]) {
+		var point= 9;
+		
+	}
+	else if (d==f[3]) {
+		var point= 9.3;
+		
+	}
+	else if (d==f[4]) {
+		var point= 8.8;
+		
+	}
+	
+	
+	
+}
+
+
+else if (c=="Q") {
+	var f=["2AC","3AC","4AC","6AC"];
+	if (d==f[0]) {
+		var point= 9.1;
+
+	}
+	else if (d==f[1]) {
+		var point= 8.3;
+		
+	}
+	else if (d==f[2]) {
+		var point= 8.7;
+		
+	}
+	else if (d==f[3]) {
+		var point= 9.2;
+		
+	}
+	
+	
+	
+}
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+else if((a=="Btech"&&b=="3rd")||(a=="B.Arch"&&b=="3rd")||(a=="B.Sc(Agri)"&&b=="3rd")||(a=="B.Des"&&b=="3rd")||(a=="MIS"&&b=="3rd")||(a=="M.Sc(Integrated)"&&b=="3rd")||(a=="BCA"&&b=="2nd")||(a=="BBA"&&b=="2nd")||(a=="B.Sc"&&b=="2nd")||(a=="B.Com"&&b=="2nd")||(a=="MCA"&&b=="1st")){
+
+console.log("Hi")
+if (c=="A") {
+	var f=["2NonAC","4AC","4NonAC","6NonAC"];
+	if (d==f[0]) {
+		var point= 8.7;
+
+	}
+	else if (d==f[1]) {
+		var point= 8.9;
+		
+	}
+	else if (d==f[2]) {
+		var point= 8.3;
+		
+	}
+	else if (d==f[3]) {
+		var point= 7.9;
+		
+	}
+	
+}
+
+
+else if (c=="B") {
+	var f=["3AC","3NonAC","6NonAC"];
+	if (d==f[0]) {
+		var point= 9;
+
+	}
+	else if (d==f[1]) {
+		var point= 7.4;
+		
+	}
+	else if (d==f[2]) {
+		var point= 8.5;
+		
+	}
+	
+	
+}
+
+
+else if (c=="C") {
+	var f=["2NonAC","4NonAC"];
+	if (d==f[0]) {
+		var point= 7.9;
+
+	}
+	else if (d==f[1]) {
+		var point= 8.4;
+		
+	}
+	
+	
+}
+
+
+else if (c=="D") {
+	var f=["1AC","1NonAC"];
+	if (d==f[0]) {
+		var point= 8.9;
+
+	}
+	else if (d==f[1]) {
+		var point= 8.8;
+		
+	}
+	
+	
+}
+
+else if (c=="DAnnex") {
+	var f=["3AC","3NonAC","4AC","4NonAC"];
+	if (d==f[0]) {
+		var point= 9.5;
+
+	}
+	else if (d==f[1]) {
+		var point= 8.9;
+		
+	}
+	else if (d==f[2]) {
+		var point= 9.6;
+		
+	}
+	else if (d==f[3]) {
+		var point= 9.2;
+		
+	}
+	
+}
+
+else if (c=="E") {
+	var f=["2NonAC"];
+	if (d==f[0]) {
+		var point= 8.5;
+
+	}
+	
+	
+}
+
+else if (c=="F") {
+	var f=["2AC","2NonAC","4NonAC","6AC","6NonAC"];
+	if (d==f[0]) {
+		var point= 8;
+
+	}
+	else if (d==f[1]) {
+		var point= 7.9;
+		
+	}
+	else if (d==f[2]) {
+		var point= 7.5;
+		
+	}
+	else if (d==f[3]) {
+		var point= 8;
+		
+	}
+	else if (d==f[4]) {
+		var point= 7;
+		
+	}
+	
+}
+
+
+else if (c=="G") {
+	var f=["1AC","1NonAC","4AC","4NonAC"];
+	if (d==f[0]) {
+		var point= 8.4;
+
+	}
+	else if (d==f[1]) {
+		var point= 8.2;
+		
+	}
+	else if (d==f[2]) {
+		var point= 9.1;
+		
+	}
+	else if (d==f[3]) {
+		var point= 8.6;
+		
+	}
+	
+	
+}
+
+else if (c=="H") {
+	var f=["1AC","1NonAC","3NonAC"];
+	if (d==f[0]) {
+		var point= 8.5;
+
+	}
+	else if (d==f[1]) {
+		var point= 8.25;
+		
+	}
+	else if (d==f[2]) {
+		var point= 7.7;
+		
+	}
+	
+	
+	
+}
+
+else if (c=="J") {
+	var f=["1AC","1NonAC","3NonAC"];
+	if (d==f[0]) {
+		var point= 8.6;
+
+	}
+	else if (d==f[1]) {
+		var point= 8.3;
+		
+	}
+	else if (d==f[2]) {
+		var point= 7.6;
+		
+	}
+	
+	
+	
+}
+
+
+else if (c=="K") {
+	var f=["4AC","6AC"];
+	if (d==f[0]) {
+		var point= 9.6;
+
+	}
+	else if (d==f[1]) {
+		var point= 8.8;
+		
+	}
+	
+	
+	
+	
+}
+
+else if (c=="L") {
+	var f=["1AC","2AC","3AC","4AC","6AC"];
+	if (d==f[0]) {
+		var point= 9.3;
+
+	}
+	else if (d==f[1]) {
+		var point= 8.9;
+		
+	}
+	else if (d==f[2]) {
+		var point= 9.1;
+		
+	}
+	else if (d==f[3]) {
+		var point= 9.5;
+		
+	}
+	else if (d==f[4]) {
+		var point= 8.5;
+		
+	}
+	
+	
+	
+}
+
+
+else if (c=="Q") {
+	var f=["2AC","3AC","4AC","6AC"];
+	if (d==f[0]) {
+		var point= 9.2;
+
+	}
+	else if (d==f[1]) {
+		var point= 9.1;
+		
+	}
+	else if (d==f[2]) {
+		var point= 8.7;
+		
+	}
+	else if (d==f[3]) {
+		var point= 9.3;
+		
+	}
+	
+	
+	
+}
+}
+var teckst=document.getElementById("barre")
+var sexst=document.getElementById("karre")
+if (point>=9) {
+
+	var prob=((e-point)/(0.2))*30 + 60
+
+}
+else if((point<9)&&(point>=8)){
+	var prob=((e-point)/(0.5))*20 + 50
+
+}
+else if((point<8)&&(point>=7)){
+	var prob=((e-point)/(0.6))*20 + 50
+
+}
+else{
+	var prob=((e-point)/(0.6))*20 + 50
+
+}
+
+if (prob>=100||e==10) {
+	teckst.innerHTML="99%"
+	 sexst.style.backgroundColor="#5cb85c"
+	 sexst.classList.add("text-white")
+	 teckst.classList.add("card-text-design");
+
+}
+else if (prob<60&&prob>30) {
+	teckst.innerHTML=Math.round(prob)+"%"
+	
+	sexst.style.backgroundColor="#ffcc5c"
+	sexst.classList.add("text-white");
+	teckst.classList.add("card-text-design");
+	
+}
+else if(prob>60&&prob<100){
+	teckst.innerHTML=Math.round(prob)+"%"
+	
+	sexst.style.backgroundColor="#5cb85c"
+	sexst.classList.add("text-white");
+	teckst.classList.add("card-text-design");
+
+}
+else if(prob<30){
+
+teckst.innerHTML="<30%"
+
+sexst.style.backgroundColor="#d9534f"
+sexst.classList.add("text-white");
+teckst.classList.add("card-text-designe");
+
+
+
+}
+}
+
+
+
+
+
+ 
+
+$(function(){
+
+  $(".chosen").chosen();
+
+});
+    </script>
+</div>  <script> $(window).on("load",function(){ $(".loader-wrapper").fadeOut("slow"); }); </script><style>a:hover{color:grey;text-decoration:none}</style>
+
+<!-- <br/><br/><div style="margin-top:60px;margin-left:80px;"> -->
+	
+<!-- <script  async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- footer -->
+ <!-- <ins class="adsbygoogle"
+     style="display:inline-block;width:1200px;height:130px"
+     data-ad-client="ca-pub-2436429471085151"
+     data-ad-slot="4418908697"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>  </div> -->
+
+<!-- <footer style="background-color:#1c2331;color:white;margin-top:-4%;" class="page-footer font-small unique-color-dark"><div style="background-color:#6351ce"><div class="container"><div style="color:white" class="row py-4 d-flex align-items-center"><div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0"><h6 class="mb-0">Get connected with us on social networks!</h6></div><div class="col-md-6 col-lg-7 text-center text-md-right"><a href="https://www.facebook.com/vit.connex.7" class="fb-ic"><i class="fab fa-facebook fa-2x white-text mr-4"> </i></a><a href="https://www.instagram.com/vit_connex/" class="ins-ic"><i style="color:white" class="fab fa-instagram fa-2x white-text"> </i></a></div></div></div></div><div class="container text-center text-md-left mt-5"><div class="row mt-3"><div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4"><img style="width:200px;height:200px" src="/images/Capture.PNG"></div><div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4"><h6 class="text-uppercase font-weight-bold">Navigate to</h6><hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width:60px;background-color:#6351ce"><p><a style="color:white" href="/">Home</a></p><p><a style="color:white" href="/share">Share my cab</a></p><p><a style="color:white" href="/adPost">Buy & sell</a></p><p><a style="color:white" href="/adPost/resources">Resources</a></p></div><div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4"><h6 class="text-uppercase font-weight-bold">Useful links</h6><hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width:60px;background-color:#6351ce"><p><a style="color:white" href="/about">About Us</a></p><p><a style="color:white" href="/contact">Contact Us</a></p><p><a style="color:white" href="/faq">Faq</a></p><p><a style="color:white" href="/privacy">Privacy policy</a></p></div><div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4"><h6 class="text-uppercase font-weight-bold">Contact</h6><hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width:60px;background-color:#6351ce"><p><i class="fas fa-home mr-3"></i> VIT Vellore,Mens Hostel</p><p><i class="fas fa-envelope mr-3"></i> <a style="color:white" href="mailto:vitconnex@gmail.com">vitconnex@gmail.com </a></p><p><i class="fas fa-phone mr-3"></i>+91 6383831327</p><p></div></div></div><div style="background-color:#263238" class="footer-copyright text-center py-3">© 2020 Copyright:<a style="color:white" href="https://mdbootstrap.com/education/bootstrap/"> vitconnex.com</a></div></footer><script src="https://use.fontawesome.com/089408c2ca.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/components/dropdown.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script><script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.10.1/js/mdb.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script><script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script></body></html>  -->

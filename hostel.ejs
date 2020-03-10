@@ -1,0 +1,1413 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+       <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+       <link href="https://fonts.googleapis.com/css?family=Cinzel|Lilita+One&display=swap" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+        <script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.min.css">
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.jquery.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Crimson+Text|Open+Sans&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="mobile.css">
+<link rel="stylesheet" type="text/css" href="pc.css">
+    
+        <script>
+            function random_function()
+            {
+                var a=document.getElementById("input").value;
+                var image=document.getElementById("blockimage");
+                var innertexttitle=document.getElementById("hi");
+                var innertextcontent=document.getElementById("bye");
+                if(a==="A")
+                {
+                    var arr=["2NonAC","4AC","4NonAC","6NonAC"];
+                    var image=document.getElementById("blockimage")
+                    image.innerHTML="<img src="+"ablock.jpg"+">"
+                    innertexttitle.innerHTML="A Block";
+                    innertextcontent.innerHTML="A Block is best for the ones who are willing to take AC rooms. Rooms here are spacious and ventilated. A Block would be the best choice for the people who have classes in MB or GDN. Since its near to the subway, it may be advantageous for the people having cycles. Nearby messes are Food park, Srr and Kamadenu. Washrooms are bad.<br><br>"
+
+                    }
+                else if(a==="B")
+                {
+                    var arr=["3AC","3NonAC","6NonAC"];
+                    image.innerHTML="<img src="+"bblock.jpg"+">"
+                    innertexttitle.innerHTML="B Block"
+                    innertextcontent.innerHTML="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae ornare turpis, ut pulvinar risus. Mauris eget lorem ac ante porttitor mattis. Pellentesque posuere augue ut tellus dictum condimentum. Praesent scelerisque efficitur sem, at porttitor magna aliquet a. Aenean interdum libero dolor, eu pulvinar felis feugiat quis.<br><br>"
+
+                }
+                
+                else if(a==="C")
+                {
+                    var arr=["2NonAC","4NonAC"];
+                    image.innerHTML="<img src="+"cblock.jpg"+">"
+                    innertexttitle.innerHTML="C Block"
+                    innertextcontent.innerHTML="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae ornare turpis, ut pulvinar risus. Mauris eget lorem ac ante porttitor mattis. Pellentesque posuere augue ut tellus dictum condimentum. Praesent scelerisque efficitur sem, at porttitor magna aliquet a. Aenean interdum libero dolor, eu pulvinar felis feugiat quis.<br><br>"
+                }
+                else if(a==="D")
+                {
+                    var arr=["1AC","1NonAC"];
+                    image.innerHTML="<img src="+"dblock.jpg"+">"
+                    innertexttitle.innerHTML="D Block"
+                    innertextcontent.innerHTML="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae ornare turpis, ut pulvinar risus. Mauris eget lorem ac ante porttitor mattis. Pellentesque posuere augue ut tellus dictum condimentum. Praesent scelerisque efficitur sem, at porttitor magna aliquet a. Aenean interdum libero dolor, eu pulvinar felis feugiat quis.<br><br>"
+                }
+                else if(a==="DAnnex")
+                {
+                    var arr=["3AC","3NonAC","4AC","4NonAC"];
+                    image.innerHTML="<img src="+"dannexblock.jpg"+">"
+                    innertexttitle.innerHTML="D Annex"
+                    innertextcontent.innerHTML="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae ornare turpis, ut pulvinar risus. Mauris eget lorem ac ante porttitor mattis. Pellentesque posuere augue ut tellus dictum condimentum. Praesent scelerisque efficitur sem, at porttitor magna aliquet a. Aenean interdum libero dolor, eu pulvinar felis feugiat quis.<br><br>"
+                }
+                else if(a==="E")
+                {
+                    var arr=["2NonAC"];
+                    image.innerHTML="<img src="+"eblock.jpg"+">"
+                    innertexttitle.innerHTML="E Block"
+                    innertextcontent.innerHTML="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae ornare turpis, ut pulvinar risus. Mauris eget lorem ac ante porttitor mattis. Pellentesque posuere augue ut tellus dictum condimentum. Praesent scelerisque efficitur sem, at porttitor magna aliquet a. Aenean interdum libero dolor, eu pulvinar felis feugiat quis.<br><br>"
+                }
+                else if(a==="F")
+                {
+                    var arr=["2AC","2NonAC","4NonAC","6AC","6NonAC"];
+                    image.innerHTML="<img src="+"fblock.jpg"+">"
+                    innertexttitle.innerHTML="F Block"
+                    innertextcontent.innerHTML="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae ornare turpis, ut pulvinar risus. Mauris eget lorem ac ante porttitor mattis. Pellentesque posuere augue ut tellus dictum condimentum. Praesent scelerisque efficitur sem, at porttitor magna aliquet a. Aenean interdum libero dolor, eu pulvinar felis feugiat quis.<br><br>"
+                }
+                else if(a==="G")
+                {
+                    var arr=["1AC","1NonAC","4AC","4NonAC"];
+                    image.innerHTML="<img src="+"gblock.jpg"+">"
+                    innertexttitle.innerHTML="G Block"
+                    innertextcontent.innerHTML="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae ornare turpis, ut pulvinar risus. Mauris eget lorem ac ante porttitor mattis. Pellentesque posuere augue ut tellus dictum condimentum. Praesent scelerisque efficitur sem, at porttitor magna aliquet a. Aenean interdum libero dolor, eu pulvinar felis feugiat quis.<br><br>"
+                }
+                 else if(a==="H")
+                {
+                    var arr=["1AC","1NonAC","3NonAC"];
+                    image.innerHTML="<img src="+"hblock.jpg"+">"
+                    innertexttitle.innerHTML="H Block"
+                    innertextcontent.innerHTML="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae ornare turpis, ut pulvinar risus. Mauris eget lorem ac ante porttitor mattis. Pellentesque posuere augue ut tellus dictum condimentum. Praesent scelerisque efficitur sem, at porttitor magna aliquet a. Aenean interdum libero dolor, eu pulvinar felis feugiat quis.<br><br>"
+                }
+                 else if(a==="J")
+                {
+                    var arr=["1AC","1NonAC","3NonAC"];
+                    image.innerHTML="<img src="+"jblock.jpg"+">"
+                    innertexttitle.innerHTML="J Block"
+                    
+                    innertextcontent.innerHTML="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae ornare turpis, ut pulvinar risus. Mauris eget lorem ac ante porttitor mattis. Pellentesque posuere augue ut tellus dictum condimentum. Praesent scelerisque efficitur sem, at porttitor magna aliquet a. Aenean interdum libero dolor, eu pulvinar felis feugiat quis.<br><br>"
+                }
+                 else if(a==="K")
+                {
+                    var arr=["4AC","6AC"];
+                    image.innerHTML="<img src="+"kblock.jpg"+">"
+                    innertexttitle.innerHTML="K Block"
+                    innertextcontent.innerHTML="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae ornare turpis, ut pulvinar risus. Mauris eget lorem ac ante porttitor mattis. Pellentesque posuere augue ut tellus dictum condimentum. Praesent scelerisque efficitur sem, at porttitor magna aliquet a. Aenean interdum libero dolor, eu pulvinar felis feugiat quis.<br><br>"
+                }
+                 else if(a==="L")
+                {
+                    var arr=["1AC","2AC","4AC","6AC"];
+                    image.innerHTML="<img src="+"lblock.jpg"+">"
+                    innertexttitle.innerHTML="L Block"
+                    innertextcontent.innerHTML="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae ornare turpis, ut pulvinar risus. Mauris eget lorem ac ante porttitor mattis. Pellentesque posuere augue ut tellus dictum condimentum. Praesent scelerisque efficitur sem, at porttitor magna aliquet a. Aenean interdum libero dolor, eu pulvinar felis feugiat quis.<br><br>"
+                }
+                else if(a==="Q")
+                {
+                    var arr=["2AC","3AC","4AC","6AC"];
+                    image.innerHTML="<img src="+"qblock.jpg"+">"
+                    innertexttitle.innerHTML="Q Block"
+                    innertextcontent.innerHTML="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae ornare turpis, ut pulvinar risus. Mauris eget lorem ac ante porttitor mattis. Pellentesque posuere augue ut tellus dictum condimentum. Praesent scelerisque efficitur sem, at porttitor magna aliquet a. Aenean interdum libero dolor, eu pulvinar felis feugiat quis.<br><br>"
+                }
+             
+                var string="";
+             
+                for(i=0;i<arr.length;i++)
+                {
+                    string=string+"<option value="+arr[i]+">"+arr[i]+"</option>";
+                }
+                document.getElementById("output").innerHTML=string;
+            }
+            function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+           
+
+
+        </script>
+        <style type="text/css">
+          
+  
+
+
+  body{
+    background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+  }
+
+            
+            #input{
+                width: 120px;
+            }
+            #output{
+                width: 120px;
+            }
+            #gpainput{
+                width: 130px;
+            }
+            #submitbutton{
+                width: 70px;
+            }
+            .wait{
+                display: inline-block;
+            }
+           
+            #alli{
+                margin-top : 60px;
+                margin-left: 100px;
+                height: 400px;
+                
+
+            }
+            #hi{
+                color: white;
+            }
+            
+
+form{
+    padding-top: 10px;
+
+
+
+}
+#moi{
+    width: 720px;
+}
+#textcontent{
+    padding-right: 5px;
+}
+#drr{
+    margin-left: 800px;
+}
+.card-title{
+    margin-left: 60px;
+}
+.dropdown{
+    margin-left: 550px;
+    
+}
+.guru{
+margin-top: 10px;
+}
+#topmain{
+    margin-top: 50px;
+    width: 1349px;
+    height: 100px;
+}
+img{
+    float: left;
+    width: 620px;
+    height: 400px;
+    margin-right: 20px;
+}
+
+#blockimage{
+    margin-left: 220px;
+    font-family: 'Crimson Text', serif;
+    font-size: large;
+    font-weight: 30;
+    font-weight: bold;
+}
+.card-text-design{
+    padding-left: 75px;
+    font-size: 40px;
+}
+.card-text-designe{
+    padding-left: 60px;
+    font-size: 40px;
+}
+.container{
+    width: 1349px;
+    padding-left: 120px;
+}
+
+
+    .oneline{
+        margin: 20px;
+    }
+    
+    img{
+        width: 500px;
+        height: 300px;
+    }
+    #topmain{
+        width: 700px;
+        
+
+    }
+
+    #input{
+                width: 140px;
+            }
+            #output{
+                width: 140px;
+            }
+            #gpainput{
+                width: 140px;
+            }
+            #submitbutton{
+                width: 140px;
+            }
+#topinfo{
+    font-family: 'Cinzel', serif;
+    font-size: 30px;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 40px;
+    margin-left: 90px;
+    color: white;
+    background-color: #1C2331;
+}
+#bye{
+    background-color: #1C2331;
+    color: white;
+}
+
+  
+  
+  
+@media (min-width: 320px) and (max-width: 480px) {
+   
+
+  
+  .container{
+    width: 100%;
+    padding-left: 30px;
+    margin-left: 10;
+  }
+  form{
+    display: block;
+    margin-left: 50px;
+    width: 100%;
+  }
+  img{background-color: white;
+    color:black;
+    border: 1px solid;
+  padding: 10px;
+  box-shadow: 5px 10px;
+  border-radius: 25px;
+                margin-top: 10px;
+                width: 400px;
+                height:300px;
+                margin-bottom: 10;
+            }
+  #blockinfo{
+    padding-top: 30px;
+    width:320px;
+    padding-right: 80px;
+    align-content: stretch;
+  }
+  
+.d-flex {
+    display: block!important;
+}
+
+   #branchselect{
+                width: 500px;
+                display: block;
+            }
+            #yearselect{
+                width: 500px;
+
+            }
+            #gpainput{
+                width: 500px;
+            }
+            #submitbutton{
+                width: 100px;
+                margin-left: 200px;
+            }
+            
+            #textcontent{
+                margin-top: 200px;
+                width: 100%;
+                margin-right: 100px;
+
+            }
+             #input{
+                width: 500px;
+            }
+            #output{
+                width: 500px;
+            }
+            #bye{
+                width: 300;
+                margin-top: 350px;
+                margin-left: 55;
+                font-size: 20px;
+            }
+            #hi{
+                margin-left: 150px;
+                margin-top: 100px;
+
+            }
+            .card-text-design {
+    padding-left: 10;
+    font-size: 40px;
+}
+
+#alli{
+    margin-left: 110px;
+}
+      #drr{
+        margin-right: 40px;
+
+      }   
+      .card-text{
+        width: 200px;
+        height: 120px;
+        text-align: center;
+
+      }
+      .card {
+        
+        width: 220px;
+        height: 138px;
+      }  
+      .card-body{
+        width: 220px;
+        height: 138px;
+        padding: 11;
+      }
+      h5{
+    height: 10px;
+    width: 100px;
+
+}
+.card-title{
+    margin-left: 46px;
+}
+#drr{
+        margin-left: 95;
+    margin-top: 60px;
+}
+body{
+    background-image: url("https://www.elsetge.cat/myimg/f/157-1571700_best-hd-wallpaper-websites-abstract-blue-and-pink.jpg");
+}
+
+#topinfo{
+    margin-left: 50px;
+    width: 600;
+    background-color: white;
+    color:black;
+    border: 1px solid;
+  padding: 10px;
+  box-shadow: 5px 10px;
+  border-radius: 25px;
+}
+form{
+     background-color: white;
+    color:black;
+    border: 1px solid;
+  padding: 10px;
+  box-shadow: 5px 10px;
+  border-radius: 25px;
+}
+#bye{
+    background-color: white;
+    color:black;
+    border: 1px solid;
+  padding: 10px;
+  box-shadow: 5px 10px;
+  border-radius: 25px;
+}
+p{
+    margin-top: 1px;
+}
+}
+
+        </style>
+        <script type="text/javascript" src="calculate.js"></script>
+    </head>
+    <body>
+        <div class="container" id="topinfo">VIT MH ROOM PREDICTOR 2020 <br>(Based on previous year stats)</div>
+
+        
+<div id="topmain">
+    
+   
+        <form class="container d-flex justify-content-around" onsubmit="return calculate()" >
+        <div class="oneline">
+
+
+         <select class="chosen" id="branchselect">
+            <option>Select Branch</option>
+            <option>Btech</option>
+            <option>M.Sc(Integrated)</option>
+            <option>MCA</option>
+            <option>B.Sc(Agri)</option>
+            <option>B.Sc</option>
+            <option>B.Des</option>
+            <option>B.Com</option>
+            <option>BCA</option>
+            <option>BBA</option>
+            <option>MIS</option>
+            <option>B.Arch</option>
+            
+
+
+        </select>
+    </div>
+    <div class="oneline">
+
+
+         <select class="chosen" id="yearselect">
+            <option>Select Year</option>
+            <option>1st</option>
+            <option>2nd</option>
+            <option>3rd</option>
+            
+         
+        </select>
+    </div>
+    <div class="oneline">
+   
+        <select id="input" class="chosen" onchange="random_function()">
+            <option>Select Block</option>
+            <option>A</option>
+            <option >B</option>
+            <option>C</option>
+            <option >D</option>
+            <option >DAnnex</option>
+            <option >E</option>
+            <option >F</option>
+            <option >G</option>
+            <option >H</option>
+            <option >J</option>
+            <option >K</option>
+            <option >L</option>
+            <option>Q</option>
+
+        </select>
+    </div>
+    <div class="oneline">
+        <select id="output" ></select>
+    </div>
+    <div class="oneline">
+        <input id="gpainput" type="number" step="0.01" min="0" max="10" placeholder="Enter your GPA">
+
+
+    </div>
+    
+    <div class="oneline">
+        <button class="btn btn-primary btn-sm" id="submitbutton" type="button" onclick="calculate()">Submit</button>
+    </div>
+</div>
+       
+       
+       <div id="blockinfo" class="yui">
+        <div id="alli">
+            <span id="blockimage">
+  
+</span>
+  <div id="curry">
+    <div id="textcontent">
+    <h5 id="hi"><br></h5>
+    <p  id="bye"></p>
+</div>
+</div>
+<div id="drr"><div class="card bg-light mb-3" style="max-width: 18rem;">
+  
+  <div class="card-body" id="karre">
+
+    <h5 class="card-title">Probability</h5>
+    <p class="card-text" id="barre">Click submit after you finish selecting your branch, required block, type of room and your gpa.  </p>
+  </div></div>
+</div>
+</div>
+
+</div>
+</div>
+</form>
+
+
+   
+
+
+    </body>
+   <script type="text/javascript">
+
+ function calculate() {
+	var a=document.getElementById('branchselect').value
+	var b=document.getElementById('yearselect').value
+	var c=document.getElementById('input').value
+	var d=document.getElementById('output').value
+	var e=document.getElementById('gpainput').value
+	
+
+	if ((a=="Btech"&&b=="1st")||(a=="B.Arch"&&b=="1st")||(a=="B.Sc(Agri)"&&b=="1st")||(a=="B.Des"&&b=="1st")||(a=="MIS"&&b=="1st")||(a=="M.Sc(Integrated)"&&b=="1st")){
+
+if (c=="A") {
+	var f=["2NonAC","4AC","4NonAC","6NonAC"];
+	if (d==f[0]) {
+		var point= 8.3;
+
+	}
+	else if (d==f[1]) {
+		var point= 9.2;
+		
+	}
+	else if (d==f[2]) {
+		var point= 8.7;
+		
+	}
+	else if (d==f[3]) {
+		var point= 8.8;
+		
+	}
+	
+}
+
+
+else if (c=="B") {
+	var f=["3AC","3NonAC","6NonAC"];
+	if (d==f[0]) {
+		var point= 8.4;
+
+	}
+	else if (d==f[1]) {
+		var point= 8;
+		
+	}
+	else if (d==f[2]) {
+		var point= 8;
+		
+	}
+	
+	
+}
+
+
+else if (c=="C") {
+	var f=["2NonAC","4NonAC"];
+	if (d==f[0]) {
+		var point= 8.2;
+
+	}
+	else if (d==f[1]) {
+		var point= 8.3;
+		
+	}
+	
+	
+}
+
+
+else if (c=="D") {
+	var f=["1AC","1NonAC"];
+	if (d==f[0]) {
+		var point= 8.4;
+
+	}
+	else if (d==f[1]) {
+		var point= 8;
+		
+	}
+	
+	
+}
+
+else if (c=="DAnnex") {
+	var f=["3AC","3NonAC","4AC","4NonAC"];
+	if (d==f[0]) {
+		var point= 9.3;
+
+	}
+	else if (d==f[1]) {
+		var point= 9.3;
+		
+	}
+	else if (d==f[2]) {
+		var point= 9.4;
+		
+	}
+	else if (d==f[3]) {
+		var point= 9.3;
+		
+	}
+	
+}
+
+else if (c=="E") {
+	var f=["2NonAC"];
+	if (d==f[0]) {
+		var point= 8.5;
+
+	}
+	
+	
+}
+
+else if (c=="F") {
+	var f=["2AC","2NonAC","4NonAC","6AC","6NonAC"];
+	if (d==f[0]) {
+		var point= 7.8;
+
+	}
+	else if (d==f[1]) {
+		var point= 7;
+		
+	}
+	else if (d==f[2]) {
+		var point= 8.1;
+		
+	}
+	else if (d==f[3]) {
+		var point= 8.2;
+		
+	}
+	else if (d==f[4]) {
+		var point= 6.8;
+		
+	}
+	
+}
+
+
+else if (c=="G") {
+	var f=["1AC","1NonAC","4AC","4NonAC"];
+	if (d==f[0]) {
+		var point= 7.6;
+
+	}
+	else if (d==f[1]) {
+		var point= 6.4;
+		
+	}
+	else if (d==f[2]) {
+		var point= 9.1;
+		
+	}
+	else if (d==f[3]) {
+		var point= 8.2;
+		
+	}
+	
+	
+}
+
+else if (c=="H") {
+	var f=["1AC","1NonAC","3NonAC"];
+	if (d==f[0]) {
+		var point= 6.6;
+
+	}
+	else if (d==f[1]) {
+		var point= 6.4;
+		
+	}
+	else if (d==f[2]) {
+		var point= 8.2;
+		
+	}
+	
+	
+	
+}
+
+else if (c=="J") {
+	var f=["1AC","1NonAC","3NonAC"];
+	if (d==f[0]) {
+		var point= 7.2;
+
+	}
+	else if (d==f[1]) {
+		var point= 7;
+		
+	}
+	else if (d==f[2]) {
+		var point= 8.4;
+		
+	}
+	
+	
+	
+}
+
+
+else if (c=="K") {
+	var f=["4AC","6AC"];
+	if (d==f[0]) {
+		var point= 9.6;
+
+	}
+	else if (d==f[1]) {
+		var point= 8.7;
+		
+	}
+	
+	
+	
+	
+}
+
+else if (c=="L") {
+	var f=["1AC","2AC","3AC","4AC","6AC"];
+	if (d==f[0]) {
+		var point= 8.2;
+
+	}
+	else if (d==f[1]) {
+		var point= 8.5;
+		
+	}
+	else if (d==f[2]) {
+		var point= 9;
+		
+	}
+	else if (d==f[3]) {
+		var point= 9.5;
+		
+	}
+	else if (d==f[4]) {
+		var point= 8.95;
+		
+	}
+	
+	
+	
+}
+
+
+else if (c=="Q") {
+	var f=["2AC","3AC","4AC","6AC"];
+	if (d==f[0]) {
+		var point= 8.4;
+
+	}
+	else if (d==f[1]) {
+		var point= 8.8;
+		
+	}
+	else if (d==f[2]) {
+		var point= 8.7;
+		
+	}
+	else if (d==f[3]) {
+		var point= 8.9;
+		
+	}
+	
+	
+	
+}
+
+
+
+
+}
+else if((a=="Btech"&&b=="2nd")||(a=="B.Arch"&&b=="2nd")||(a=="B.Sc(Agri)"&&b=="2nd")||(a=="B.Des"&&b=="2nd")||(a=="MIS"&&b=="2nd")||(a=="M.Sc(Integrated)"&&b=="2nd")||(a=="BCA"&&b=="1st")||(a=="BBA"&&b=="1st")||(a=="B.Sc"&&b=="1st")||(a=="B.Com"&&b=="1st")){
+
+
+if (c=="A") {
+	var f=["2NonAC","4AC","4NonAC","6NonAC"];
+	if (d==f[0]) {
+		var point= 8.7;
+
+	}
+	else if (d==f[1]) {
+		var point= 9.2;
+		
+	}
+	else if (d==f[2]) {
+		var point= 8.9;
+		
+	}
+	else if (d==f[3]) {
+		var point= 8.8;
+		
+	}
+	
+}
+
+
+else if (c=="B") {
+	var f=["3AC","3NonAC","2NonAC","6NonAC"];
+	if (d==f[0]) {
+		var point= 8.9;
+
+	}
+	else if (d==f[1]) {
+		var point= 8;
+		
+	}
+	else if (d==f[2]) {
+		var point= 8.7;
+		
+	}
+	else if (d==f[3]) {
+		var point= 8;
+		
+	}
+	
+	
+}
+
+
+else if (c=="C") {
+	var f=["2NonAC","4NonAC"];
+	if (d==f[0]) {
+		var point= 8.5;
+
+	}
+	else if (d==f[1]) {
+		var point= 8.2;
+		
+	}
+	
+	
+}
+
+
+else if (c=="D") {
+	var f=["1AC","1NonAC"];
+	if (d==f[0]) {
+		var point= 8.9;
+
+	}
+	else if (d==f[1]) {
+		var point= 8.8;
+		
+	}
+	
+	
+}
+
+else if (c=="DAnnex") {
+	var f=["3AC","3NonAC","4AC","4NonAC"];
+	if (d==f[0]) {
+		var point= 9;
+
+	}
+	else if (d==f[1]) {
+		var point= 9.4;
+		
+	}
+	else if (d==f[2]) {
+		var point= 9.4;
+		
+	}
+	else if (d==f[3]) {
+		var point= 9.2;
+		
+	}
+	
+}
+
+else if (c=="E") {
+	var f=["2NonAC"];
+	if (d==f[0]) {
+		var point= 8.5;
+
+	}
+	
+	
+}
+
+else if (c=="F") {
+	var f=["2AC","2NonAC","4NonAC","6AC","6NonAC"];
+	if (d==f[0]) {
+		var point= 8.6;
+
+	}
+	else if (d==f[1]) {
+		var point= 8.2;
+		
+	}
+	else if (d==f[2]) {
+		var point= 7.5;
+		
+	}
+	else if (d==f[3]) {
+		var point= 8.4;
+		
+	}
+	else if (d==f[4]) {
+		var point= 7;
+		
+	}
+	
+}
+
+
+else if (c=="G") {
+	var f=["1AC","1NonAC","4AC","4NonAC"];
+	if (d==f[0]) {
+		var point= 7.2;
+
+	}
+	else if (d==f[1]) {
+		var point= 6.6;
+		
+	}
+	else if (d==f[2]) {
+		var point= 9;
+		
+	}
+	else if (d==f[3]) {
+		var point= 8.4;
+		
+	}
+	
+	
+}
+
+else if (c=="H") {
+	var f=["1AC","1NonAC","3NonAC"];
+	if (d==f[0]) {
+		var point= 7;
+
+	}
+	else if (d==f[1]) {
+		var point= 6.7;
+		
+	}
+	else if (d==f[2]) {
+		var point= 8;
+		
+	}
+	
+	
+	
+}
+
+else if (c=="J") {
+	var f=["1AC","1NonAC","3NonAC"];
+	if (d==f[0]) {
+		var point= 7.1;
+
+	}
+	else if (d==f[1]) {
+		var point= 6.5;
+		
+	}
+	else if (d==f[2]) {
+		var point= 8.2;
+		
+	}
+	
+	
+	
+}
+
+
+else if (c=="K") {
+	var f=["4AC","6AC"];
+	if (d==f[0]) {
+		var point= 9.5;
+
+	}
+	else if (d==f[1]) {
+		var point= 8.9;
+		
+	}
+	
+	
+	
+	
+}
+
+else if (c=="L") {
+	var f=["1AC","2AC","3AC","4AC","6AC"];
+	if (d==f[0]) {
+		var point= 8.8;
+
+	}
+	else if (d==f[1]) {
+		var point= 8.7;
+		
+	}
+	else if (d==f[2]) {
+		var point= 9;
+		
+	}
+	else if (d==f[3]) {
+		var point= 9.3;
+		
+	}
+	else if (d==f[4]) {
+		var point= 8.8;
+		
+	}
+	
+	
+	
+}
+
+
+else if (c=="Q") {
+	var f=["2AC","3AC","4AC","6AC"];
+	if (d==f[0]) {
+		var point= 9.1;
+
+	}
+	else if (d==f[1]) {
+		var point= 8.3;
+		
+	}
+	else if (d==f[2]) {
+		var point= 8.7;
+		
+	}
+	else if (d==f[3]) {
+		var point= 9.2;
+		
+	}
+	
+	
+	
+}
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+else if((a=="Btech"&&b=="3rd")||(a=="B.Arch"&&b=="3rd")||(a=="B.Sc(Agri)"&&b=="3rd")||(a=="B.Des"&&b=="3rd")||(a=="MIS"&&b=="3rd")||(a=="M.Sc(Integrated)"&&b=="3rd")||(a=="BCA"&&b=="2nd")||(a=="BBA"&&b=="2nd")||(a=="B.Sc"&&b=="2nd")||(a=="B.Com"&&b=="2nd")||(a=="MCA"&&b=="1st")){
+
+console.log("Hi")
+if (c=="A") {
+	var f=["2NonAC","4AC","4NonAC","6NonAC"];
+	if (d==f[0]) {
+		var point= 8.7;
+
+	}
+	else if (d==f[1]) {
+		var point= 8.9;
+		
+	}
+	else if (d==f[2]) {
+		var point= 8.3;
+		
+	}
+	else if (d==f[3]) {
+		var point= 7.9;
+		
+	}
+	
+}
+
+
+else if (c=="B") {
+	var f=["3AC","3NonAC","6NonAC"];
+	if (d==f[0]) {
+		var point= 9;
+
+	}
+	else if (d==f[1]) {
+		var point= 7.4;
+		
+	}
+	else if (d==f[2]) {
+		var point= 8.5;
+		
+	}
+	
+	
+}
+
+
+else if (c=="C") {
+	var f=["2NonAC","4NonAC"];
+	if (d==f[0]) {
+		var point= 7.9;
+
+	}
+	else if (d==f[1]) {
+		var point= 8.4;
+		
+	}
+	
+	
+}
+
+
+else if (c=="D") {
+	var f=["1AC","1NonAC"];
+	if (d==f[0]) {
+		var point= 8.9;
+
+	}
+	else if (d==f[1]) {
+		var point= 8.8;
+		
+	}
+	
+	
+}
+
+else if (c=="DAnnex") {
+	var f=["3AC","3NonAC","4AC","4NonAC"];
+	if (d==f[0]) {
+		var point= 9.5;
+
+	}
+	else if (d==f[1]) {
+		var point= 8.9;
+		
+	}
+	else if (d==f[2]) {
+		var point= 9.6;
+		
+	}
+	else if (d==f[3]) {
+		var point= 9.2;
+		
+	}
+	
+}
+
+else if (c=="E") {
+	var f=["2NonAC"];
+	if (d==f[0]) {
+		var point= 8.5;
+
+	}
+	
+	
+}
+
+else if (c=="F") {
+	var f=["2AC","2NonAC","4NonAC","6AC","6NonAC"];
+	if (d==f[0]) {
+		var point= 8;
+
+	}
+	else if (d==f[1]) {
+		var point= 7.9;
+		
+	}
+	else if (d==f[2]) {
+		var point= 7.5;
+		
+	}
+	else if (d==f[3]) {
+		var point= 8;
+		
+	}
+	else if (d==f[4]) {
+		var point= 7;
+		
+	}
+	
+}
+
+
+else if (c=="G") {
+	var f=["1AC","1NonAC","4AC","4NonAC"];
+	if (d==f[0]) {
+		var point= 8.4;
+
+	}
+	else if (d==f[1]) {
+		var point= 8.2;
+		
+	}
+	else if (d==f[2]) {
+		var point= 9.1;
+		
+	}
+	else if (d==f[3]) {
+		var point= 8.6;
+		
+	}
+	
+	
+}
+
+else if (c=="H") {
+	var f=["1AC","1NonAC","3NonAC"];
+	if (d==f[0]) {
+		var point= 8.5;
+
+	}
+	else if (d==f[1]) {
+		var point= 8.25;
+		
+	}
+	else if (d==f[2]) {
+		var point= 7.7;
+		
+	}
+	
+	
+	
+}
+
+else if (c=="J") {
+	var f=["1AC","1NonAC","3NonAC"];
+	if (d==f[0]) {
+		var point= 8.6;
+
+	}
+	else if (d==f[1]) {
+		var point= 8.3;
+		
+	}
+	else if (d==f[2]) {
+		var point= 7.6;
+		
+	}
+	
+	
+	
+}
+
+
+else if (c=="K") {
+	var f=["4AC","6AC"];
+	if (d==f[0]) {
+		var point= 9.6;
+
+	}
+	else if (d==f[1]) {
+		var point= 8.8;
+		
+	}
+	
+	
+	
+	
+}
+
+else if (c=="L") {
+	var f=["1AC","2AC","3AC","4AC","6AC"];
+	if (d==f[0]) {
+		var point= 9.3;
+
+	}
+	else if (d==f[1]) {
+		var point= 8.9;
+		
+	}
+	else if (d==f[2]) {
+		var point= 9.1;
+		
+	}
+	else if (d==f[3]) {
+		var point= 9.5;
+		
+	}
+	else if (d==f[4]) {
+		var point= 8.5;
+		
+	}
+	
+	
+	
+}
+
+
+else if (c=="Q") {
+	var f=["2AC","3AC","4AC","6AC"];
+	if (d==f[0]) {
+		var point= 9.2;
+
+	}
+	else if (d==f[1]) {
+		var point= 9.1;
+		
+	}
+	else if (d==f[2]) {
+		var point= 8.7;
+		
+	}
+	else if (d==f[3]) {
+		var point= 9.3;
+		
+	}
+	
+	
+	
+}
+}
+var teckst=document.getElementById("barre")
+var sexst=document.getElementById("karre")
+if (point>=9) {
+
+	var prob=((e-point)/(0.2))*30 + 60
+
+}
+else if((point<9)&&(point>=8)){
+	var prob=((e-point)/(0.5))*20 + 50
+
+}
+else if((point<8)&&(point>=7)){
+	var prob=((e-point)/(0.6))*20 + 50
+
+}
+else{
+	var prob=((e-point)/(0.6))*20 + 50
+
+}
+
+if (prob>=100||e==10) {
+	teckst.innerHTML="99%"
+	 sexst.style.backgroundColor="#5cb85c"
+	 sexst.classList.add("text-white")
+	 teckst.classList.add("card-text-design");
+
+}
+else if (prob<60&&prob>30) {
+	teckst.innerHTML=Math.round(prob)+"%"
+	
+	sexst.style.backgroundColor="#ffcc5c"
+	sexst.classList.add("text-white");
+	teckst.classList.add("card-text-design");
+	
+}
+else if(prob>60&&prob<100){
+	teckst.innerHTML=Math.round(prob)+"%"
+	
+	sexst.style.backgroundColor="#5cb85c"
+	sexst.classList.add("text-white");
+	teckst.classList.add("card-text-design");
+
+}
+else if(prob<30){
+
+teckst.innerHTML="<30%"
+
+sexst.style.backgroundColor="#d9534f"
+sexst.classList.add("text-white");
+teckst.classList.add("card-text-designe");
+
+
+
+}
+}
+
+
+
+
+
+
+$(function(){
+
+  $(".chosen").chosen();
+
+});
+    </script>
+</html>

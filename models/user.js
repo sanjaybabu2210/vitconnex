@@ -8,7 +8,7 @@ var UserSchema = new mongoose.Schema({
 	password: String,
 
 	  
-	verified: {type:Boolean, default:false},
+	verified: {type:Boolean, default:true},
 	year: String,
 
 	resetPasswordToken: String,
