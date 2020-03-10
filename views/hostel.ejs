@@ -448,8 +448,8 @@ p{
 }
 
         </style>
-
-  
+        <script type="text/javascript" src="calculate.js"></script>
+    </head>
     <body>
         <div style="margin-top:4.8%;" class="container" id="topinfo">VIT MH ROOM PREDICTOR 2020 <br>(Based on previous year stats)</div>
 
@@ -540,6 +540,7 @@ p{
     <div class="oneline">
         <button class="btn btn-primary btn-sm" id="submitbutton" type="button" onclick="calculate()">Submit</button>
     </div>
+</div>
        
        
        <div id="blockinfo" class="yui">
@@ -564,14 +565,12 @@ p{
 </div>
 
 </div>
-			
-		
-
-
+</div>
 </form>
 
 
-		</div>
+   
+
 
     </body>
    <script type="text/javascript">
@@ -581,7 +580,7 @@ function calculate() {
 	var c=document.getElementById('input').value
 	var d=document.getElementById('output').value
 	var e=document.getElementById('gpainput').value
-	var m=document.getElementById('inputbranch').value
+		var m=document.getElementById('inputbranch').value
 
 	
 	
