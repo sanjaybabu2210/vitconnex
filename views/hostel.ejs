@@ -447,10 +447,10 @@ p{
         <div style="margin-top:4.8%;" class="container" id="topinfo">VIT MH ROOM PREDICTOR 2020 <br>(Based on previous year stats)</div>
 
         
-<div id="topmain" >
+<div id="topmain" style="margin-left:10%" >
     
    
-        <form class="container d-flex justify-content-around" onsubmit="return calculate()" >
+        <form style="margin-left:5%" class="container d-flex justify-content-around" onsubmit="return calculate()" >
         <div class="oneline">
 
 
@@ -513,7 +513,7 @@ p{
 
     </div>
 			 <div class="oneline">
-        <input id="gpainput" type="number" step="0.01" min="0" max="10" style="width:190px;" placeholder="Enter Branch Topper CGPA">
+        <input id="gpainput2" type="number" step="0.01" min="0" max="10" style="width:190px;" placeholder="Enter Branch Topper CGPA">
 
     </div>
     
@@ -560,6 +560,9 @@ function calculate() {
 	var c=document.getElementById('input').value
 	var d=document.getElementById('output').value
 	var e=document.getElementById('gpainput').value
+	var f=document.getElementById('gpainput2').value
+	
+	e = (e/f)*9.9
 	
 
 	if ((a=="Btech"&&b=="1st")||(a=="B.Arch"&&b=="1st")||(a=="B.Sc(Agri)"&&b=="1st")||(a=="B.Des"&&b=="1st")||(a=="MIS"&&b=="1st")||(a=="M.Sc(Integrated)"&&b=="1st")){
