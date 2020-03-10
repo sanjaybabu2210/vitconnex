@@ -307,7 +307,7 @@ img{
   padding: 10px;
   box-shadow: 5px 10px;
   border-radius: 25px;
-                margin-top: 10px;
+                margin-top: 70px;
                 width: 400px;
                 height:300px;
                 margin-bottom: 10;
@@ -352,6 +352,12 @@ img{
                 width: 500px;
             }
             #bye{
+				background-color: white;
+				color:black;
+				border:1px solid;
+				padding:10px;
+				box-shadow:5px 10px;
+				border-radius:25px;
                 width: 300;
                 margin-top: 350px;
                 margin-left: 55;
@@ -446,7 +452,7 @@ p{
     <body>
         <div style="margin-top:4.8%;" class="container" id="topinfo">VIT MH ROOM PREDICTOR 2020 <br>(Based on previous year stats)</div>
 
-        
+          <div class="container" id="topinfo">Note: Btech students are requested to enter their branch for best results. </div>
 <div id="topmain" style="margin-left:10%" >
     
    
@@ -512,11 +518,24 @@ p{
 
 
     </div>
-			 <div class="oneline">
-        <input id="gpainput2" type="number" step="0.01" min="0" max="10" style="width:190px;" placeholder="Enter Branch Topper CGPA">
-
-    </div>
+			 
     
+    <div class="oneline">
+        <select id="inputbranch" >
+            <option>NonBtech</option>
+            <option>CSE</option>
+            <option>IT</option>
+            <option>ECE</option>
+            <option>Mechanical</option>
+            <option>EEE</option>
+            <option>Civil</option>
+            <option>Chemical</option>
+            <option>Other</option>
+
+
+        </select>
+    </div>
+			
     <div class="oneline">
         <button class="btn btn-primary btn-sm" id="submitbutton" type="button" onclick="calculate()">Submit</button>
     </div>
@@ -560,9 +579,10 @@ function calculate() {
 	var c=document.getElementById('input').value
 	var d=document.getElementById('output').value
 	var e=document.getElementById('gpainput').value
-	var f=document.getElementById('gpainput2').value
+		var m=document.getElementById('inputbravanch').value
+
 	
-	e = (e/f)*9.9
+	
 	
 
 	if ((a=="Btech"&&b=="1st")||(a=="B.Arch"&&b=="1st")||(a=="B.Sc(Agri)"&&b=="1st")||(a=="B.Des"&&b=="1st")||(a=="MIS"&&b=="1st")||(a=="M.Sc(Integrated)"&&b=="1st")){
@@ -1379,6 +1399,38 @@ else if((point<8)&&(point>=7)){
 else{
 	var prob=((e-point)/(0.6))*20 + 50
 
+}
+	
+if (m=="NonBtech") {
+	prob+=0
+
+}
+else if (m=="CSE") {
+	prob=prob-1
+}
+else if (m=="IT") {
+	prob=prob+1
+	
+}
+else if (m=="ECE") {
+	prob+=0
+}
+else if (m=="Mechanical") {
+	prob+=10
+	
+}
+else if (m=="EEE") {
+	prob+=8
+}
+else if (m=="Civil") {
+	prob+=9
+}
+else if (m=="Chemical") {
+	prob+=3
+}
+else if (m=="Other") {
+	prob+=0
+	
 }
 
 if (prob>=100||e==10) {
