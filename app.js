@@ -89,7 +89,7 @@ app.use(forceSecure([
 
 
 ////
-mongoose.connect('mongodb+srv://sanjaybabu:hNsnLfx9IHgRnuBb@cluster1-fu4qm.mongodb.net/vitWeb?retryWrites=true&w=majority', {
+mongoose.connect('mongodb+srv://sanjaybabu:$password@cluster1-fu4qm.mongodb.net/vitWeb?retryWrites=true&w=majority', {
 	useNewUrlParser: true,
 	useCreateIndex: true
 }).then(() => {
@@ -98,7 +98,7 @@ mongoose.connect('mongodb+srv://sanjaybabu:hNsnLfx9IHgRnuBb@cluster1-fu4qm.mongo
 	console.log('ERROR:', err.message);
 });
 
-//vhRXwndZr3c5jNzH
+
 
 
 var commentRoutes = require("./routes/comments"),

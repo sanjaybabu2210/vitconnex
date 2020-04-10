@@ -122,7 +122,7 @@ var newcontest = {username:req.body.username,name:req.body.name,count:1}
 											service: 'Gmail', 
 											auth: {
 											  user: 'vitconnex@gmail.com',
-											  pass: 'viteeenext2020'
+											  pass: ''
 											}
 										  });
 										  var mailOptions = {
@@ -183,7 +183,7 @@ var newcontest = {username:req.body.username,name:req.body.name,count:1}
         service: 'Gmail', 
         auth: {
           user: 'vitconnex@gmail.com',
-          pass: 'viteeenext2020'
+          pass: ''
         }
       });
       var mailOptions = {
@@ -288,7 +288,7 @@ router.post('/forgot', function(req, res, next) {
         service: 'Gmail', 
         auth: {
           user: 'vitconnex@gmail.com',
-          pass: 'viteeenext2020'
+          pass: 
         }
       });
       var mailOptions = {
@@ -371,7 +371,7 @@ router.post('/reset/:token', function(req, res) {
         service: 'Gmail', 
         auth: {
           user: 'vitconnex@gmail.com',
-          pass: 'viteeenext2020'
+          pass: ''
         }
       });
       var mailOptions = {
