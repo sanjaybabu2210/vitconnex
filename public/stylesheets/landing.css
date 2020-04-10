@@ -1,5 +1,8 @@
+
+
 body {
   background-color: #000;
+	font-family: 'Kanit', sans-serif;
 }
 
 #landing-header {
@@ -104,4 +107,8 @@ body {
 
 .no-cssanimations .slideshow li {
 	opacity: 1;
+}
+body {
+  background-color: #000;
+	font-family: 'Kanit', sans-serif;
 }
